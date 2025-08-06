@@ -4,7 +4,7 @@
 4|Mahatma Gandhi|Be the change that you wish to see in the world.
 5|Steve Jobs|Stay hungry, stay foolish.
 6|Nelson Mandela|The greatest glory in living lies not in never falling, but in rising every time we fall.
-7. Martin Luther King Jr.|The time is always right to do what is right.
+7|Martin Luther King Jr.|The time is always right to do what is right.
 8|Winston Churchill|Success is not final, failure is not fatal: it is the courage to continue that counts.
 9|Mother Teresa|Spread love everywhere you go. Let no one ever come to you without leaving happier.
 10|Franklin D. Roosevelt|The only thing we have to fear is fear itself.
