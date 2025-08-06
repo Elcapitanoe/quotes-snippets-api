@@ -18,7 +18,6 @@ const STALE_CACHE_MAX_AGE = 60 * 60 * 1000; // 1 hour max stale
 
 export const config = {
   runtime: 'edge',
-  regions: ['sin1'], // Singapore for Southeast Asia
   memory: 128
 };
 
