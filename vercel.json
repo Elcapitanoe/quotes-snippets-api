@@ -9,7 +9,7 @@
   "crons": [
     {
       "path": "/api/quotes?warmup=true",
-      "schedule": "*/5 * * * *"
+      "schedule": "0 0 * * *"
     }
   ],
   "routes": [
