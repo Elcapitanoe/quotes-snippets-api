@@ -17,8 +17,7 @@ const CIRCUIT_BREAKER_TIMEOUT = 30 * 1000; // 30 seconds
 const STALE_CACHE_MAX_AGE = 60 * 60 * 1000; // 1 hour max stale
 
 export const config = {
-  runtime: 'edge',
-  memory: 128
+  runtime: 'edge'
 };
 
 // Efficient random selection with pre-computed indices
@@ -58,98 +57,57 @@ function getBufferedQuote() {
 function shouldAttemptFetch() {
   const now = Date.now();
   
-  // If we've exceeded max attempts, wait for circuit breaker timeout
   if (quotesCache.fetchAttempts >= MAX_FETCH_ATTEMPTS) {
-    if (quotesCache.lastFetchError && 
-        (now - quotesCache.lastFetchError) < CIRCUIT_BREAKER_TIMEOUT) {
+    if (quotesCache.lastFetchError && (now - quotesCache.lastFetchError) < CIRCUIT_BREAKER_TIMEOUT) {
       return false;
     }
-    // Reset attempts after timeout
     quotesCache.fetchAttempts = 0;
   }
-  
   return true;
 }
 
 // Optimized quote loading with error handling
-async function loadQuotes(isWarmup = false) {
+async function loadQuotes(isWarmup = false, request) {
   const now = Date.now();
   
-  // Return cached data if still valid
   if (quotesCache.data && (now - quotesCache.timestamp) < CACHE_DURATION) {
     return quotesCache.data;
   }
   
-  // Check circuit breaker
   if (!shouldAttemptFetch()) {
-    if (quotesCache.data) {
-      console.log('Circuit breaker active, returning stale cache');
-      return quotesCache.data;
-    }
+    if (quotesCache.data) return quotesCache.data;
     throw new Error('Circuit breaker active and no cached data available');
   }
   
-  // Prevent concurrent fetches
   if (quotesCache.isLoading && !isWarmup) {
-    // Wait briefly and return cached data if available
-    if (quotesCache.data) {
-      return quotesCache.data;
-    }
+    if (quotesCache.data) return quotesCache.data;
   }
   
   quotesCache.isLoading = true;
   
   try {
     const startTime = performance.now();
-    
-    // Use hardcoded internal URL for security
-    const baseUrl = process.env.VERCEL_URL 
-      ? `https://${process.env.VERCEL_URL}` 
-      : 'http://localhost:3000';
-    
-    const response = await fetch(`${baseUrl}/assets/quotes.min.json`, {
-      headers: {
-        'User-Agent': 'Vercel-Edge-Function',
-        'Cache-Control': 'no-cache'
-      }
-    });
-    
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-    }
-    
+    // Fetch from public assets directly
+    const url = new URL('/assets/quotes.min.json', request.url);
+    const response = await fetch(url.toString(), { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const quotes = await response.json();
     const loadTime = performance.now() - startTime;
-    
-    if (!Array.isArray(quotes) || quotes.length === 0) {
-      throw new Error('Invalid quotes data structure');
-    }
-    
-    // Update cache with new data
+    if (!Array.isArray(quotes) || quotes.length === 0) throw new Error('Invalid data');
     quotesCache.data = quotes;
     quotesCache.timestamp = now;
     quotesCache.fetchAttempts = 0;
     quotesCache.lastFetchError = null;
-    
-    // Refresh the quote buffer with new data
     refreshQuoteBuffer(quotes);
-    
-    console.log(`Quotes loaded: ${quotes.length} items in ${loadTime.toFixed(2)}ms`);
-    
+    console.log(`Quotes loaded ${quotes.length} items in ${loadTime.toFixed(2)}ms`);
     return quotes;
-    
   } catch (error) {
     quotesCache.fetchAttempts++;
-    quotesCache.lastFetchError = now;
-    
-    console.error(`Quote fetch attempt ${quotesCache.fetchAttempts} failed:`, error.message);
-    
-    // Return stale cache if available and not too old
+    quotesCache.lastFetchError = Date.now();
+    console.error(`Fetch failed #${quotesCache.fetchAttempts}:`, error);
     if (quotesCache.data && (now - quotesCache.timestamp) < STALE_CACHE_MAX_AGE) {
-      console.log('Returning stale cache due to fetch error');
       return quotesCache.data;
     }
-    
     throw error;
   } finally {
     quotesCache.isLoading = false;
@@ -158,142 +116,44 @@ async function loadQuotes(isWarmup = false) {
 
 // Optimized quote selection
 function selectQuote() {
-  // Try buffered quote first (fastest path)
-  const bufferedQuote = getBufferedQuote();
-  if (bufferedQuote) {
-    return bufferedQuote;
-  }
-  
-  // Fallback to direct selection if buffer is empty
-  if (quotesCache.data && quotesCache.data.length > 0) {
-    const randomIndex = Math.floor(Math.random() * quotesCache.data.length);
-    return quotesCache.data[randomIndex];
-  }
-  
+  const buffered = getBufferedQuote();
+  if (buffered) return buffered;
+  if (quotesCache.data && quotesCache.data.length > 0) return quotesCache.data[Math.floor(Math.random() * quotesCache.data.length)];
   return null;
 }
 
-// Enhanced response headers for optimal caching
-function getCacheHeaders(cacheStatus) {
+// Response headers
+function getCacheHeaders(status) {
   const headers = {
     'Content-Type': 'application/json',
-    'X-Content-Type-Options': 'nosniff',
-    'X-Frame-Options': 'DENY',
-    'X-XSS-Protection': '1; mode=block',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'X-Cache-Status': cacheStatus
+    'X-Cache-Status': status,
+    'Cache-Control': status === 'hit' ? 'public, max-age=30' : 'public, max-age=0'
   };
-  
-  // Adaptive cache control based on cache status
-  switch (cacheStatus) {
-    case 'hit':
-      headers['Cache-Control'] = 'public, max-age=30, s-maxage=60, stale-while-revalidate=300';
-      break;
-    case 'stale':
-      headers['Cache-Control'] = 'public, max-age=0, s-maxage=30, stale-while-revalidate=600';
-      break;
-    default:
-      headers['Cache-Control'] = 'public, max-age=0, s-maxage=60, stale-while-revalidate=300';
-  }
-  
   return headers;
 }
 
 export default async function handler(request) {
-  const startTime = performance.now();
-  const url = new URL(request.url);
-  const isWarmup = url.searchParams.get('warmup') === 'true';
-  
-  // Handle warmup requests
-  if (isWarmup) {
-    try {
-      await loadQuotes(true);
-      return new Response(
-        JSON.stringify({ 
-          status: 'warmed',
-          cacheSize: quotesCache.data?.length || 0,
-          bufferSize: quotesCache.buffer.length
-        }),
-        {
-          status: 200,
-          headers: getCacheHeaders('warmup')
-        }
-      );
-    } catch (error) {
-      return new Response(
-        JSON.stringify({ status: 'warmup-failed', error: error.message }),
-        { status: 500, headers: getCacheHeaders('error') }
-      );
-    }
-  }
-  
-  // Handle preflight requests
-  if (request.method === 'OPTIONS') {
-    return new Response(null, {
-      status: 200,
-      headers: getCacheHeaders('options')
-    });
-  }
-  
-  // Only allow GET requests for quotes
-  if (request.method !== 'GET') {
-    return new Response(
-      JSON.stringify({ error: 'Method not allowed' }),
-      {
-        status: 405,
-        headers: getCacheHeaders('error')
-      }
-    );
-  }
+  const start = performance.now();
+  const isWarmup = new URL(request.url).searchParams.get('warmup') === 'true';
   
   try {
-    // Load quotes (from cache or fetch)
-    await loadQuotes();
-    
-    // Get optimized quote selection
-    const quote = selectQuote();
-    
-    if (!quote) {
-      throw new Error('No quotes available');
+    const quotes = await loadQuotes(isWarmup, request);
+    if (isWarmup) {
+      return new Response(JSON.stringify({ status: 'warmed', count: quotes.length }), { headers: getCacheHeaders('hit') });
     }
-    
-    const processingTime = performance.now() - startTime;
-    const cacheAge = Date.now() - quotesCache.timestamp;
-    const cacheStatus = cacheAge < CACHE_DURATION ? 'hit' : 'stale';
-    
-    // Add performance headers for monitoring
-    const headers = getCacheHeaders(cacheStatus);
-    headers['X-Response-Time'] = `${processingTime.toFixed(2)}ms`;
-    headers['X-Cache-Age'] = `${Math.floor(cacheAge / 1000)}s`;
-    headers['X-Buffer-Index'] = quotesCache.bufferIndex.toString();
-    
+    if (request.method === 'OPTIONS') return new Response(null, { headers: getCacheHeaders('hit') });
+    if (request.method !== 'GET') return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405, headers: getCacheHeaders('error') });
+    const quote = selectQuote();
+    if (!quote) throw new Error('No data');
+    const processing = performance.now() - start;
+    const headers = getCacheHeaders('hit');
+    headers['X-Response-Time'] = `${processing.toFixed(2)}ms`;
+    return new Response(JSON.stringify(quote), { headers });
+  } catch (err) {
+    console.error(err);
     return new Response(
-      JSON.stringify(quote),
-      {
-        status: 200,
-        headers
-      }
-    );
-    
-  } catch (error) {
-    console.error('API Error:', error);
-    
-    const processingTime = performance.now() - startTime;
-    
-    return new Response(
-      JSON.stringify({ 
-        error: 'Failed to fetch quote',
-        message: 'Please try again later'
-      }),
-      {
-        status: 500,
-        headers: {
-          ...getCacheHeaders('error'),
-          'X-Response-Time': `${processingTime.toFixed(2)}ms`
-        }
-      }
+      JSON.stringify({ error: 'Failed to fetch quote', message: 'Please try again later' }),
+      { status: 500, headers: getCacheHeaders('error') }
     );
   }
 }
