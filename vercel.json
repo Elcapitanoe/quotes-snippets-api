@@ -3,7 +3,6 @@
   "functions": {
     "api/quotes.js": {
       "runtime": "edge",
-      "regions": ["sin1"],
       "memory": 128
     }
   },
