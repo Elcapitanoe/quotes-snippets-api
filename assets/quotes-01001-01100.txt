@@ -1,1 +1,100 @@
-
+1001|Abraham Lincoln|Leave nothing for tomorrow which can be done today.
+1002|Henry David Thoreau|Success usually comes to those who are too busy to be looking for it.
+1003|J.M. Power|If you want to make your dreams come true, the first thing you have to do is wake up.
+1004|Vidal Sassoon|The only place where success comes before work is in the dictionary.
+1005|John D. Rockefeller Jr.|The secret of success is to do the common thing uncommonly well.
+1006|Ralph Waldo Emerson|To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.
+1007|Franklin D. Roosevelt|The only thing we have to fear is fear itself.
+1008|Oscar Wilde|Be yourself; everyone else is already taken.
+1009|Oprah Winfrey|When you undervalue what you do, the world will undervalue who you are.
+1010|Maurice Chevalier|Don't be afraid to be afraid.
+1011|Albert Einstein|Try not to become a man of success. Rather become a man of value.
+1012|Michael Caine|Be like a duck. Calm on the surface, but always paddling like the dickens underneath.
+1013|Lionel Barrymore|The older you get, the more you realize that kindness is synonymous with happiness.
+1014|Abraham Lincoln|Don't worry when you are not recognized, but strive to be worthy of recognition.
+1015|Alice Walker|Don't wait around for other people to be happy for you. Any happiness you get you've got to make yourself.
+1016|J.M. Barrie|The secret of happiness is not in doing what one likes, but in liking what one does.
+1017|Oprah Winfrey|You become what you believe.
+1018|Elton John|Live for each second without hesitation.
+1019|Steve Jobs|Your time is limited, so don't waste it living someone else's life.
+1020|Marilyn Monroe|Keep smiling, because life is a beautiful thing and there's so much to smile about.
+1021|Steve Jobs|Don't be trapped by dogma – which is living with the results of other people's thinking.
+1022|Mark Twain|The secret of getting ahead is getting started.
+1023|Walt Disney|All our dreams can come true, if we have the courage to pursue them.
+1024|Pablo Picasso|Everything you can imagine is real.
+1025|Vincent Van Gogh|Great things are done by a series of small things brought together.
+1026|Orson Welles|Create your own style. Let it be unique for yourself and yet identifiable for others.
+1027|Alice Munro|Intelligence is not attractive if it is not combined with elegance.
+1028|Judy Garland|Always be a first-rate version of yourself, instead of a second-rate version of somebody else.
+1029|Mahatma Gandhi|Live as if you were to die tomorrow. Learn as if you were to live forever.
+1030|Steve Jobs|Don't let the noise of others' opinions drown out your own inner voice.
+1031|Steve Jobs|If I try my best and fail, well, I've tried my best.
+1032|Benjamin Franklin|Don't put off until tomorrow what you can do today.
+1033|William Arthur Ward|Opportunities are like sunrises. If you wait too long, you miss them.
+1034|Les Brown|There are no limits to what you can accomplish, except the limits you place on your own thinking.
+1035|Eleanor Roosevelt|I am who I am today because of the choices I made yesterday.
+1036|Jean Vanier|Growth begins when we start to accept our own weakness.
+1037|W.M. Thackeray|The true happiness of life is to live with humility.
+1038|Suzy Kassem|Doubt kills more dreams than failure ever will.
+1039|Ralph Marston|Instead of complaining about your circumstances, get busy and create some new ones.
+1040|Jim Rohn|Discipline is the bridge between goals and accomplishment.
+1041|Mahatma Gandhi|The weak can never forgive. Forgiveness is the attribute of the strong.
+1042|Muhammad Ali|It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe.
+1043|Eleanor Roosevelt|If life were predictable it would cease to be life, and be without flavor.
+1044|Oprah Winfrey|If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.
+1045|Martin Luther King Jr.|We must learn to live together as brothers or perish together as fools.
+1046|Nelson Mandela|The greatest glory in living lies not in never falling, but in rising every time we fall.
+1047|Lao Tzu|When I let go of what I am, I become what I might be.
+1048|Albert Einstein|Once we accept our limits, we go beyond them.
+1049|Anonymous|The three things in life – your health, your mission, and the people you love.
+1050|T.S. Eliot|Only those who will risk going too far can possibly find out how far one can go.
+1051|Robert Louis Stevenson|Don't judge each day by the harvest you reap but by the seeds that you plant.
+1052|Bob Marley|Love the life you live. Live the life you love.
+1053|Abraham Lincoln|Human action can be modified to some extent, but human nature cannot be changed.
+1054|Helen Keller|Life is either a daring adventure or nothing at all.
+1055|Albert Einstein|Peace cannot be kept by force; it can only be achieved by understanding.
+1056|George Eliot|It is never too late to be what you might have been.
+1057|Albert Einstein|If you want to live a happy life, tie it to a goal, not to people or things.
+1058|Ralph Waldo Emerson|Life is a succession of lessons which must be lived to be understood.
+1059|Steve Jobs|Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma — which is living with the results of other people's thinking.
+1060|Ernest Hemingway|In order to write about life first you must live it.
+1061|Oprah Winfrey|Turn your wounds into wisdom.
+1062|John F. Kennedy|Effort and courage are not enough without purpose and direction.
+1063|Audrey Hepburn|The most important thing is to enjoy your life—to be happy—it's all that matters.
+1064|Mahatma Gandhi|The world has enough for everyone's need, but not enough for everyone's greed.
+1065|John D. Rockefeller|I always tried to turn every disaster into an opportunity.
+1066|Wayne Dyer|What we think determines what happens to us, so if we want to change our lives, we need to stretch our minds.
+1067|Helen Keller|Success and happiness lie in you. Resolve to keep happy, and your joy and you shall form an invincible host against difficulties.
+1068|Ralph Waldo Emerson|We must be our own before we can be another's.
+1069|Faraaz Kazi|Some people are going to leave, but that's not the end of your story. That's the end of their part in your story.
+1070|Ali ibn Abi Talib|Do not say a word that you would not like to hear yourself if it were said to you by another.
+1071|C. S. Lewis|You are never too old to set another goal or to dream a new dream.
+1072|Eleanor Roosevelt|The future belongs to those who believe in the beauty of their dreams.
+1073|Brian Dyson|Don't ever give up when you are still capable of making an effort. Nothing is over until you stop trying.
+1074|Richard Marcinko|Change is painful. It causes people to feel insecure, confused, and angry. People want things to be the same, because they want to be in control.
+1075|Mahatma Gandhi|Live as if you were to die tomorrow. Learn as if you were to live forever.
+1076|Brian Tracy|Develop an attitude of gratitude, and give thanks for everything that happens to you.
+1077|Eleanor Roosevelt|No one can make you feel inferior without your consent.
+1078|Anonymous|Never regret a day in your life. Good days give you happiness and bad days give you experience.
+1079|Anonymous|Not everyone will understand you, but the ones who do, will never forget you.
+1080|Anonymous|Sometimes we're tested not to show our weaknesses, but to discover our strengths.
+1081|Anonymous|The harder you work for something, the greater you'll feel when you achieve it.
+1082|Grace Hansen|Don't be afraid your life will end; be afraid that it will never begin.
+1083|G. K. Chesterton|A truly great man is a man who makes every man feel great.
+1084|Robert Morley|To fall in love with yourself is the first secret to happiness.
+1085|Anonymous|The real difficulty is to overcome how you think about yourself.
+1086|Francis of Assisi|Let us begin again, for until now we have done nothing.
+1087|Benjamin Franklin|Glass, china, and reputation are easily cracked and never well mended.
+1088|John Quincy Adams|If your actions inspire others to dream more, learn more, do more and become more, you are a leader.
+1089|Napoleon Hill|If you cannot do great things, do small things in a great way.
+1090|Charles F. Kettering|Believe and act as if it were impossible to fail.
+1091|Alan Kay|The best way to predict the future is to invent it.
+1092|George Eliot|It is never too late to be what you might have been.
+1093|Albert Einstein|A person who never made a mistake never tried anything new.
+1094|Eleanor Roosevelt|Remember no one can make you feel inferior without your consent.
+1095|Colin R. Davis|The road to success and the road to failure are almost exactly the same.
+1096|Vince Lombardi|Winning isn't everything, but the will to win is everything.
+1097|Anonymous|The three most important things in life: your health, your mission, and the people you love.
+1098|Eleanor Roosevelt|The future belongs to those who believe in the beauty of their dreams.
+1099|Helen Keller|Life is either a daring adventure or nothing at all.
+1100|Walt Disney|The way to get started is to quit talking and begin doing.
