@@ -2,12 +2,12 @@
   "version": 2,
   "routes": [
     {
-      "src": "/api",       
+      "src": "^/api(?:/.*)?$",
       "dest": "/api/quotes.js"
     },
     {
-      "src": "/quotes\\.txt", 
-      "status": 404           
+      "src": "/assets/.*\\.txt$",
+      "status": 404
     }
   ]
 }
