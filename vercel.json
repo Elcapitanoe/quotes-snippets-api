@@ -1,23 +1,7 @@
 {
   "version": 2,
-  "crons": [
-    {
-      "path": "/api/quotes?warmup=true",
-      "schedule": "0 0 * * *"
-    }
-  ],
   "routes": [
-    {
-      "src": "^/assets/quotes\\.min\\.json$",
-      "status": 404
-    },
-    {
-      "src": "^/api(?:/.*)?$",
-      "dest": "/api/quotes.js"
-    },
-    {
-      "src": "/assets/.*\\.(txt|json)$",
-      "status": 404
-    }
+    { "src": "/api", "dest": "/api/quotes.js" },
+    { "src": "/assets/quotes\\.txt", "status": 404 }
   ]
 }
