@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/quotes", "dest": "/api/quotes.js" }
+  ]
+}
