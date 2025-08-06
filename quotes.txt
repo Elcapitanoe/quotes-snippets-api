@@ -1,0 +1,3 @@
+1|Albert Einstein|Imagination is more important than knowledge.
+2|Socrates|The unexamined life is not worth living.
+3|Yoda|Do or do not. There is no try.
