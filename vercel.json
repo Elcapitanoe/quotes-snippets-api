@@ -2,7 +2,7 @@
   "version": 2,
   "functions": {
     "api/quotes.js": {
-      "runtime": "vercel-edge"
+      "runtime": "edge"
     }
   },
   "crons": [
