@@ -6,7 +6,7 @@
 <h3 align="center">Quotes Snippets API</h3>
 
 <p align="center">
-  <a href="https://quotes.domiadi.com" target="_blank">Web Page</a>
+  <a href="https://quotes.domiadi.com"">Usage</a>
   &nbsp;|&nbsp;
   <a href="https://github.com/Elcapitanoe/quotes-snippets-api/issues">Bug Report</a>
   &nbsp;|&nbsp;
