@@ -1,4 +1,4 @@
-package main
+package handler
 
 import (
 	"encoding/json"
@@ -26,11 +26,10 @@ type QuotesData struct {
 
 var (
 	quotesCache *QuotesData
-	rng         *rand.Rand
+	rng         = rand.New(rand.NewSource(time.Now().UnixNano()))
 )
 
 func init() {
-	rng = rand.New(rand.NewSource(time.Now().UnixNano()))
 	if err := loadQuotes(); err != nil {
 		log.Printf("Warning: Failed to load quotes on startup: %v", err)
 	}
@@ -68,6 +67,7 @@ func getRandomQuote() (*Quote, error) {
 			return nil, fmt.Errorf("no quotes available and failed to reload: %v", err)
 		}
 	}
+
 	index := rng.Intn(len(quotesCache.quotes))
 	return &quotesCache.quotes[index], nil
 }
@@ -102,7 +102,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method != "GET" {
 		w.WriteHeader(http.StatusMethodNotAllowed)
-		_ = json.NewEncoder(w).Encode(map[string]string{"error": "Method not allowed"})
+		json.NewEncoder(w).Encode(map[string]string{"error": "Method not allowed"})
 		return
 	}
 
@@ -110,11 +110,12 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		if err := loadQuotes(); err != nil {
 			log.Printf("Warmup failed: %v", err)
 			w.WriteHeader(http.StatusInternalServerError)
-			_ = json.NewEncoder(w).Encode(map[string]string{"error": "Warmup failed"})
+			json.NewEncoder(w).Encode(map[string]string{"error": "Warmup failed"})
 			return
 		}
+
 		w.Header().Set("Content-Type", "application/json")
-		_ = json.NewEncoder(w).Encode(map[string]interface{}{
+		json.NewEncoder(w).Encode(map[string]interface{}{
 			"status":   "warmed",
 			"quotes":   quotesCache.totalSize,
 			"loadTime": quotesCache.loadTime.Format(time.RFC3339),
@@ -126,29 +127,19 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Printf("Error getting random quote: %v", err)
 		w.WriteHeader(http.StatusInternalServerError)
-		_ = json.NewEncoder(w).Encode(map[string]string{"error": "Failed to get quote"})
+		json.NewEncoder(w).Encode(map[string]string{"error": "Failed to get quote"})
 		return
 	}
 
-	quote.ResponseTime = fmt.Sprintf("%.3fms", float64(time.Since(startTime).Microseconds())/1000)
+	quote.ResponseTime = fmt.Sprintf("%.3fms", float64(time.Since(startTime).Nanoseconds())/1e6)
 
 	w.Header().Set("X-Total-Quotes", strconv.Itoa(quotesCache.totalSize))
 	w.Header().Set("X-Cache-Age", time.Since(quotesCache.loadTime).String())
 	w.Header().Set("X-Response-Time", quote.ResponseTime)
 	w.Header().Set("Content-Type", "application/json")
-	if err := json.NewEncoder(w).Encode(quote); err != nil {
-		log.Printf("Error encoding response: %v", err)
-		w.WriteHeader(http.StatusInternalServerError)
-	}
-	log.Printf("Served quote %s in %s", quote.ID, quote.ResponseTime)
-}
 
-// Local dev server
-func main() {
-	if len(os.Args) > 1 && os.Args[1] == "dev" {
-		log.Println("Starting local dev server at http://localhost:8080")
-		http.HandleFunc("/api/quotes", Handler)
-		http.Handle("/", http.FileServer(http.Dir("public")))
-		log.Fatal(http.ListenAndServe(":8080", nil))
+	if err := json.NewEncoder(w).Encode(quote); err != nil {
+		log.Printf("Error encoding JSON: %v", err)
+		w.WriteHeader(http.StatusInternalServerError)
 	}
 }
