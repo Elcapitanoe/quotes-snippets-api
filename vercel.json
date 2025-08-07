@@ -2,18 +2,21 @@
   "version": 2,
   "builds": [
     {
-      "src": "public/index.html",
-      "use": "@vercel/static"
+      "src": "api/quotes.ts",
+      "use": "@vercel/node"
     },
     {
-      "src": "api/quotes.js",
-      "use": "@vercel/node"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
     }
   ],
   "routes": [
     {
-      "src": "^/api(?:/.*)?$",
-      "dest": "/api/quotes.js"
+      "src": "/api",
+      "dest": "/api/quotes.ts"
     },
     {
       "src": "/data/.*",
@@ -25,7 +28,12 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/public/index.html"
+      "dest": "/dist/index.html"
     }
-  ]
+  ],
+  "functions": {
+    "api/quotes.ts": {
+      "maxDuration": 10
+    }
+  }
 }
