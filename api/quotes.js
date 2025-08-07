@@ -2,6 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
   try {
     const quotesFile = path.join(__dirname, '../output/quotes-all.txt');
 
