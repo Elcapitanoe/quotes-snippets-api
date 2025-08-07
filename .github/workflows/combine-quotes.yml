@@ -17,27 +17,54 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Combine all .txt files from assets/ into output/quotes-all.txt
+      - name: Combine and convert to JSON
         run: |
-          mkdir -p output
-          find assets -type f -name "*.txt" -exec cat {} + > output/quotes-all.txt
+          mkdir -p data
 
-      - name: Count total lines
+          ID=1
+          echo "[" > data/quotes.json
+          first=1
+
+          for file in assets/*.txt; do
+            while IFS= read -r line; do
+              [ -z "$line" ] && continue
+
+              IFS='|' read -r _ from quote <<< "$line"
+
+              newid=$(printf "%06d" $ID)
+
+              from_escaped=$(echo "$from" | sed 's/"/\\"/g')
+              quote_escaped=$(echo "$quote" | sed 's/"/\\"/g')
+
+              [ $first -eq 0 ] && echo "," >> data/quotes.json
+
+              echo "  {\"id\": \"$newid\", \"from\": \"$from_escaped\", \"quote\": \"$quote_escaped\"}" >> data/quotes.json
+
+              ID=$((ID + 1))
+              first=0
+            done < "$file"
+          done
+
+          echo "]" >> data/quotes.json
+
+          jq -c . data/quotes.json > data/quotes.min.json
+
+      - name: Count total quotes
         id: count_lines
         run: |
-          COUNT=$(wc -l < output/quotes-all.txt)
-          echo "total_lines=$COUNT" >> $GITHUB_OUTPUT
+          COUNT=$(jq length data/quotes.json)
+          echo "total_quotes=$COUNT" >> $GITHUB_OUTPUT
 
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit and push if quotes-all.txt changed
+      - name: Commit and push if changed
         run: |
           if [[ `git status --porcelain` ]]; then
-            git add output/quotes-all.txt
-            git commit -m "Auto: Update - TOTAL QUOTES: ${{ steps.count_lines.outputs.total_lines }}"
+            git add data/quotes.json data/quotes.min.json
+            git commit -m "Auto: Update - TOTAL QUOTES: ${{ steps.count_lines.outputs.total_quotes }}"
             git push
           else
             echo "No changes to commit"
