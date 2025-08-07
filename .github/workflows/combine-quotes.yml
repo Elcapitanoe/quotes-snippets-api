@@ -25,19 +25,16 @@ jobs:
           ID=1
           echo "[" > data/quotes.json
           first=1
+
           datalog="data/data.log"
           > "$datalog"
 
           declare -A seen_quotes
-          declare -A quote_ids
+          declare -A quote_ids_list
 
-          duplicate_count=0
           total_count=0
           saved_count=0
-
-          # Temp file for structured duplicates
-          dupetemp="data/.dupes.tmp"
-          > "$dupetemp"
+          duplicate_count=0
 
           for file in assets/*.txt; do
             while IFS= read -r line; do
@@ -48,13 +45,12 @@ jobs:
               key="$quote"
 
               if [[ -n "${seen_quotes["$key"]}" ]]; then
-                duplicate_count=$((duplicate_count + 1))
-                echo "[$original_id] $quote" >> "$dupetemp"
+                quote_ids_list["$key"]="${quote_ids_list["$key"]} $original_id"
                 continue
               fi
 
-              seen_quotes["$key"]=1
-              quote_ids["$key"]=$original_id
+              seen_quotes["$key"]=$original_id
+              quote_ids_list["$key"]=$original_id
 
               new_id=$(printf "%06d" $ID)
               from_escaped=$(echo "$from" | sed 's/"/\\"/g')
@@ -72,27 +68,23 @@ jobs:
           echo "]" >> data/quotes.json
           jq -c . data/quotes.json > data/quotes.min.json
 
-          echo "Total Raw Entries: $total_count" >> "$datalog"
-          echo "Unique Quotes Saved: $saved_count" >> "$datalog"
-          echo "Duplicates Removed: $duplicate_count" >> "$datalog"
+          echo "Total Assets: $total_count" >> "$datalog"
+          echo "Total Quotes Saved: $saved_count" >> "$datalog"
+          echo "Removed Duplicates: $((total_count - saved_count))" >> "$datalog"
           echo "" >> "$datalog"
+          echo "Duplicates Found:" >> "$datalog"
 
-          # Sort and group duplicates
-          if [[ -s "$dupetemp" ]]; then
-            echo "List of Duplicates:" >> "$datalog"
-
-            sort "$dupetemp" | awk '
-            {
-              quote = substr($0, index($0,$2));
-              group[quote] = group[quote] $0 "\n";
-            }
-            END {
-              for (q in group) {
-                printf "%s\n", group[q];
-                print ""  # empty line between groups
-              }
-            }' >> "$datalog"
-          fi
+          for quote in "${!quote_ids_list[@]}"; do
+            ids="${quote_ids_list[$quote]}"
+            count=$(echo "$ids" | wc -w)
+            if [ "$count" -ge 2 ]; then
+              for id in $ids; do
+                echo "[$id] $quote" >> "$datalog"
+              done
+              echo "" >> "$datalog"
+              duplicate_count=$((duplicate_count + count - 1))
+            fi
+          done
 
           echo "total_quotes=$saved_count" >> $GITHUB_OUTPUT
           echo "duplicate_count=$duplicate_count" >> $GITHUB_OUTPUT
