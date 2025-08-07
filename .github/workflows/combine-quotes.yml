@@ -1,0 +1,43 @@
+name: Combine Quotes
+
+on:
+  push:
+    paths:
+      - 'assets/**'
+
+permissions:
+  contents: write
+
+jobs:
+  combine:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Combine all .txt files from assets/ into output/quotes-all.txt
+        run: |
+          mkdir -p output
+          find assets -type f -name "*.txt" -exec cat {} + > output/quotes-all.txt
+
+      - name: Count total lines
+        id: count_lines
+        run: |
+          COUNT=$(wc -l < output/quotes-all.txt)
+          echo "total_lines=$COUNT" >> $GITHUB_OUTPUT
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push if quotes-all.txt changed
+        run: |
+          if [[ `git status --porcelain` ]]; then
+            git add output/quotes-all.txt
+            git commit -m "Auto: Update - TOTAL QUOTES: ${{ steps.count_lines.outputs.total_lines }}"
+            git push
+          else
+            echo "No changes to commit"
+          fi
