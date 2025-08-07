@@ -1,18 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/quotes.ts",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
   "routes": [
     {
       "src": "/api",
@@ -33,7 +20,10 @@
   ],
   "functions": {
     "api/quotes.ts": {
+      "runtime": "nodejs18.x",
       "maxDuration": 10
     }
-  }
+  },
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
 }
