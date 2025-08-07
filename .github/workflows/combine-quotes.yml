@@ -25,48 +25,63 @@ jobs:
           ID=1
           echo "[" > data/quotes.json
           first=1
-          dupelog="data/duplicates.log"
-          > "$dupelog"
+          datalog="data/data.log"
+          > "$datalog"
 
-          declare -A seen
-          declare -A id_map
+          declare -A seen_quotes
+          declare -A quote_ids
+
           duplicate_count=0
-          total_before=0
+          total_count=0
+          saved_count=0
+
+          duplicates=()
 
           for file in assets/*.txt; do
             while IFS= read -r line; do
               [ -z "$line" ] && continue
-              total_before=$((total_before + 1))
+              total_count=$((total_count + 1))
 
               IFS='|' read -r original_id from quote <<< "$line"
-              key="${from}|${quote}"
+              key="$quote"
 
-              if [[ -n "${seen["$key"]}" ]]; then
+              if [[ -n "${seen_quotes["$key"]}" ]]; then
                 duplicate_count=$((duplicate_count + 1))
-                echo "Duplicate: original ID $original_id (same as original ID ${id_map["$key"]})" >> "$dupelog"
+                duplicates+=("- [$original_id] $quote")
                 continue
               fi
 
-              seen["$key"]=1
-              id_map["$key"]=$original_id
+              seen_quotes["$key"]=1
+              quote_ids["$key"]=$original_id
 
-              newid=$(printf "%06d" $ID)
+              new_id=$(printf "%06d" $ID)
               from_escaped=$(echo "$from" | sed 's/"/\\"/g')
               quote_escaped=$(echo "$quote" | sed 's/"/\\"/g')
 
               [ $first -eq 0 ] && echo "," >> data/quotes.json
-              echo "  {\"id\": \"$newid\", \"from\": \"$from_escaped\", \"quote\": \"$quote_escaped\"}" >> data/quotes.json
+              echo "  {\"id\": \"$new_id\", \"from\": \"$from_escaped\", \"quote\": \"$quote_escaped\"}" >> data/quotes.json
 
               ID=$((ID + 1))
+              saved_count=$((saved_count + 1))
               first=0
             done < "$file"
           done
 
           echo "]" >> data/quotes.json
-
           jq -c . data/quotes.json > data/quotes.min.json
 
-          echo "total_quotes=$((ID - 1))" >> $GITHUB_OUTPUT
+          # Write to data.log
+          echo "Total Raw Entries: $total_count" >> "$datalog"
+          echo "Unique Quotes Saved: $saved_count" >> "$datalog"
+          echo "Duplicates Removed: $duplicate_count" >> "$datalog"
+          echo "" >> "$datalog"
+
+          if (( duplicate_count > 0 )); then
+            echo "List of Duplicates:" >> "$datalog"
+            printf '%s\n' "${duplicates[@]}" >> "$datalog"
+          fi
+
+          echo "total_quotes=$saved_count" >> $GITHUB_OUTPUT
           echo "duplicate_count=$duplicate_count" >> $GITHUB_OUTPUT
 
       - name: Configure Git
@@ -77,24 +92,12 @@ jobs:
       - name: Commit and push if changed
         run: |
           if [[ `git status --porcelain` ]]; then
-            git add data/quotes.json data/quotes.min.json
+            git add data/quotes.json data/quotes.min.json data/data.log
 
             TOTAL=${{ steps.combine_quotes.outputs.total_quotes }}
             DUPS=${{ steps.combine_quotes.outputs.duplicate_count }}
 
-            if [[ -f "data/duplicates.log" && -s "data/duplicates.log" ]]; then
-              git add data/duplicates.log
-
-              echo "[Update] Total: $TOTAL | Duplicates Removed: $DUPS" > commit-msg.txt
-              echo "" >> commit-msg.txt
-              echo "Duplicate log (max 100 lines):" >> commit-msg.txt
-              head -n 100 data/duplicates.log >> commit-msg.txt
-
-              git commit -F commit-msg.txt
-            else
-              git commit -m "[Update] Total: $TOTAL | No Duplicates Found"
-            fi
-
+            git commit -m "[Update] Total: $TOTAL | Duplicates Removed: $DUPS"
             git push
           else
             echo "No changes to commit"
