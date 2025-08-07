@@ -38,26 +38,23 @@ jobs:
               [ -z "$line" ] && continue
               total_before=$((total_before + 1))
 
-              IFS='|' read -r _ from quote <<< "$line"
+              IFS='|' read -r original_id from quote <<< "$line"
               key="${from}|${quote}"
-
-              newid=$(printf "%06d" $ID)
 
               if [[ -n "${seen["$key"]}" ]]; then
                 duplicate_count=$((duplicate_count + 1))
-                echo "Duplicate ID: $newid (same as ID: ${id_map["$key"]})" >> "$dupelog"
-                ID=$((ID + 1))
+                echo "Duplicate: original ID $original_id (same as original ID ${id_map["$key"]})" >> "$dupelog"
                 continue
               fi
 
               seen["$key"]=1
-              id_map["$key"]=$newid
+              id_map["$key"]=$original_id
 
+              newid=$(printf "%06d" $ID)
               from_escaped=$(echo "$from" | sed 's/"/\\"/g')
               quote_escaped=$(echo "$quote" | sed 's/"/\\"/g')
 
               [ $first -eq 0 ] && echo "," >> data/quotes.json
-
               echo "  {\"id\": \"$newid\", \"from\": \"$from_escaped\", \"quote\": \"$quote_escaped\"}" >> data/quotes.json
 
               ID=$((ID + 1))
@@ -69,7 +66,7 @@ jobs:
 
           jq -c . data/quotes.json > data/quotes.min.json
 
-          echo "total_quotes=$((ID - 1 - duplicate_count))" >> $GITHUB_OUTPUT
+          echo "total_quotes=$((ID - 1))" >> $GITHUB_OUTPUT
           echo "duplicate_count=$duplicate_count" >> $GITHUB_OUTPUT
 
       - name: Configure Git
