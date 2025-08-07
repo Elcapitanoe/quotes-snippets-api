@@ -14,7 +14,7 @@ interface ApiResponse extends Quote {
 
 let quotesCache: Quote[] | null = null
 let cacheTimestamp = 0
-const CACHE_DURATION = 300000 // 5 minutes
+const CACHE_DURATION = 60000 // 1 minute
 
 function loadQuotes(): Quote[] {
   const now = Date.now()
@@ -43,7 +43,9 @@ export default function handler(req: VercelRequest, res: VercelResponse): void {
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS')
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
   res.setHeader('Content-Type', 'application/json')
-  res.setHeader('Cache-Control', 'public, max-age=60')
+  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate')
+  res.setHeader('Pragma', 'no-cache')
+  res.setHeader('Expires', '0')
 
   if (req.method === 'OPTIONS') {
     res.status(200).end()
@@ -57,10 +59,14 @@ export default function handler(req: VercelRequest, res: VercelResponse): void {
 
   try {
     const quotes = loadQuotes()
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+    
+    // Use current timestamp to ensure better randomness
+    const seed = Date.now() + Math.random()
+    const randomIndex = Math.floor((seed * 9301 + 49297) % 233280 / 233280 * quotes.length)
+    const randomQuote = quotes[randomIndex]
     
     const elapsed = Math.round(performance.now() - startTime)
-    const responseTime = `${elapsed}.${Math.floor(Math.random() * 900) + 100}ms`
+    const responseTime = `${elapsed}.${Math.floor(Math.random() * 999) + 1}ms`
 
     const response: ApiResponse = {
       ...randomQuote,
