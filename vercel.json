@@ -20,7 +20,7 @@
   ],
   "functions": {
     "api/quotes.ts": {
-      "runtime": "nodejs18.x",
+      "runtime": "@vercel/node@3.2.17",
       "maxDuration": 10
     }
   },
