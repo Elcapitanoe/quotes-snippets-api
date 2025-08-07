@@ -76,7 +76,7 @@ jobs:
         run: |
           if [[ `git status --porcelain` ]]; then
             git add data/quotes.json data/quotes.min.json
-            git commit -m "Total Quotes: ${{ steps.combine_quotes.outputs.total_quotes }} | Duplicate: ${{ steps.combine_quotes.outputs.duplicate_count }}"
+            git commit -m "[Update] Total: ${{ steps.combine_quotes.outputs.total_quotes }} | Duplicates Removed: ${{ steps.combine_quotes.outputs.duplicate_count }}"
             git push
           else
             echo "No changes to commit"
