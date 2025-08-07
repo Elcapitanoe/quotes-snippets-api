@@ -24,12 +24,12 @@ module.exports = (req, res) => {
     const quotes = JSON.parse(data);
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-    const endTime = performance.now();
-    const responseTime = (endTime - startTime).toFixed(3);
+    const elapsed = Math.round(performance.now() - startTime);
+    const responseTime = `${elapsed}ms`;
 
     res.status(200).json({
       ...randomQuote,
-      responseTime: `${responseTime}ms`
+      responseTime
     });
   } catch (err) {
     console.error(err);
