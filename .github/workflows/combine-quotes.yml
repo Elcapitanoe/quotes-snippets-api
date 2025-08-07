@@ -35,7 +35,9 @@ jobs:
           total_count=0
           saved_count=0
 
-          duplicates=()
+          # Temp file for structured duplicates
+          dupetemp="data/.dupes.tmp"
+          > "$dupetemp"
 
           for file in assets/*.txt; do
             while IFS= read -r line; do
@@ -47,7 +49,7 @@ jobs:
 
               if [[ -n "${seen_quotes["$key"]}" ]]; then
                 duplicate_count=$((duplicate_count + 1))
-                duplicates+=("- [$original_id] $quote")
+                echo "[$original_id] $quote" >> "$dupetemp"
                 continue
               fi
 
@@ -70,15 +72,26 @@ jobs:
           echo "]" >> data/quotes.json
           jq -c . data/quotes.json > data/quotes.min.json
 
-          # Write to data.log
           echo "Total Raw Entries: $total_count" >> "$datalog"
           echo "Unique Quotes Saved: $saved_count" >> "$datalog"
           echo "Duplicates Removed: $duplicate_count" >> "$datalog"
           echo "" >> "$datalog"
 
-          if (( duplicate_count > 0 )); then
+          # Sort and group duplicates
+          if [[ -s "$dupetemp" ]]; then
             echo "List of Duplicates:" >> "$datalog"
-            printf '%s\n' "${duplicates[@]}" >> "$datalog"
+
+            sort "$dupetemp" | awk '
+            {
+              quote = substr($0, index($0,$2));
+              group[quote] = group[quote] $0 "\n";
+            }
+            END {
+              for (q in group) {
+                printf "%s\n", group[q];
+                print ""  # empty line between groups
+              }
+            }' >> "$datalog"
           fi
 
           echo "total_quotes=$saved_count" >> $GITHUB_OUTPUT
