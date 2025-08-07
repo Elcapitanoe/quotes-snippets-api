@@ -1,5 +1,15 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "public/index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "api/quotes.js",
+      "use": "@vercel/node"
+    }
+  ],
   "routes": [
     {
       "src": "^/api(?:/.*)?$",
@@ -12,6 +22,10 @@
     {
       "src": "/assets/.*",
       "status": 404
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.html"
     }
   ]
 }
