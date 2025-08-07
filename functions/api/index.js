@@ -1,38 +1,55 @@
-const fs = require('fs');
-const path = require('path');
-const { performance } = require('perf_hooks');
-
-module.exports = (req, res) => {
+// functions/api/index.js
+export async function onRequestGet(context) {
   const startTime = performance.now();
 
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-
   try {
-    const quotesFile = path.join(__dirname, '../data/quotes.min.json');
+    const url = new URL(context.request.url);
+    const origin = url.origin;
+    const quotesUrl = `${origin}/data/quotes.min.json`;
 
-    if (!fs.existsSync(quotesFile)) {
-      return res.status(404).json({ error: 'quotes.min.json not found.' });
+    const res = await fetch(quotesUrl);
+    if (!res.ok) {
+      return new Response(JSON.stringify({ error: 'quotes.min.json not found.' }), {
+        status: 404,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        }
+      });
     }
 
-    const data = fs.readFileSync(quotesFile, 'utf8').trim();
-    if (!data) {
-      return res.status(500).json({ error: 'quotes.min.json is empty.' });
+    const text = (await res.text()).trim();
+    if (!text) {
+      return new Response(JSON.stringify({ error: 'quotes.min.json is empty.' }), {
+        status: 500,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        }
+      });
     }
 
-    const quotes = JSON.parse(data);
+    const quotes = JSON.parse(text);
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
     const endTime = performance.now();
     const responseTime = (endTime - startTime).toFixed(3);
 
-    res.status(200).json({
+    return new Response(JSON.stringify({
       ...randomQuote,
       responseTime: `${responseTime}ms`
+    }), {
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      }
     });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Failed to read or parse quotes.' });
+  } catch {
+    return new Response(JSON.stringify({ error: 'Failed to read or parse quotes.' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      }
+    });
   }
-};
+}
