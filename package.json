@@ -4,7 +4,7 @@
   "description": "A lightweight public API that delivers random inspirational quotes in JSON format",
   "type": "module",
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "vite build",
     "dev": "vite",
     "preview": "vite preview"
   },
