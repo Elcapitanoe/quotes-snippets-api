@@ -16,3 +16,8 @@
 
 ## About
 This API is designed with simplicity and speed in mind. It requires no authentication and returns clean, lightweight responses. Just call the endpoint to get a fresh quote every time. Perfect for personal projects, portfolios, landing pages, or chatbot integrations.
+
+## API Endpoint
+```
+GET https://quotes.domiadi.com/api
+```
