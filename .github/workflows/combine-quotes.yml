@@ -17,19 +17,34 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Combine and convert to JSON
+      - name: Combine, deduplicate, and convert to JSON
+        id: combine_quotes
         run: |
           mkdir -p data
 
           ID=1
           echo "[" > data/quotes.json
           first=1
+          tmpfile=$(mktemp)
+
+          declare -A seen
+          duplicate_count=0
+          total_before=0
 
           for file in assets/*.txt; do
             while IFS= read -r line; do
               [ -z "$line" ] && continue
+              total_before=$((total_before + 1))
 
               IFS='|' read -r _ from quote <<< "$line"
+
+              key="${from}|${quote}"
+              if [[ -n "${seen["$key"]}" ]]; then
+                duplicate_count=$((duplicate_count + 1))
+                continue
+              fi
+
+              seen["$key"]=1
 
               newid=$(printf "%06d" $ID)
 
@@ -49,11 +64,8 @@ jobs:
 
           jq -c . data/quotes.json > data/quotes.min.json
 
-      - name: Count total quotes
-        id: count_lines
-        run: |
-          COUNT=$(jq length data/quotes.json)
-          echo "total_quotes=$COUNT" >> $GITHUB_OUTPUT
+          echo "total_quotes=$((ID - 1))" >> $GITHUB_OUTPUT
+          echo "duplicate_count=$duplicate_count" >> $GITHUB_OUTPUT
 
       - name: Configure Git
         run: |
@@ -64,7 +76,7 @@ jobs:
         run: |
           if [[ `git status --porcelain` ]]; then
             git add data/quotes.json data/quotes.min.json
-            git commit -m "Auto: Update - TOTAL QUOTES: ${{ steps.count_lines.outputs.total_quotes }}"
+            git commit -m "Total Quotes: ${{ steps.combine_quotes.outputs.total_quotes }} | Duplicate: ${{ steps.combine_quotes.outputs.duplicate_count }}"
             git push
           else
             echo "No changes to commit"
