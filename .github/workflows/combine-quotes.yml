@@ -26,8 +26,11 @@ jobs:
           echo "[" > data/quotes.json
           first=1
           tmpfile=$(mktemp)
+          dupelog="data/duplicates.log"
+          > "$dupelog"
 
           declare -A seen
+          declare -A id_map
           duplicate_count=0
           total_before=0
 
@@ -37,16 +40,19 @@ jobs:
               total_before=$((total_before + 1))
 
               IFS='|' read -r _ from quote <<< "$line"
-
               key="${from}|${quote}"
+
+              newid=$(printf "%06d" $ID)
+
               if [[ -n "${seen["$key"]}" ]]; then
                 duplicate_count=$((duplicate_count + 1))
+                echo "Duplicate ID: $newid (same as ID: ${id_map["$key"]})" >> "$dupelog"
+                ID=$((ID + 1))
                 continue
               fi
 
               seen["$key"]=1
-
-              newid=$(printf "%06d" $ID)
+              id_map["$key"]=$newid
 
               from_escaped=$(echo "$from" | sed 's/"/\\"/g')
               quote_escaped=$(echo "$quote" | sed 's/"/\\"/g')
@@ -64,7 +70,7 @@ jobs:
 
           jq -c . data/quotes.json > data/quotes.min.json
 
-          echo "total_quotes=$((ID - 1))" >> $GITHUB_OUTPUT
+          echo "total_quotes=$((ID - 1 - duplicate_count))" >> $GITHUB_OUTPUT
           echo "duplicate_count=$duplicate_count" >> $GITHUB_OUTPUT
 
       - name: Configure Git
@@ -76,7 +82,19 @@ jobs:
         run: |
           if [[ `git status --porcelain` ]]; then
             git add data/quotes.json data/quotes.min.json
-            git commit -m "[Update] Total: ${{ steps.combine_quotes.outputs.total_quotes }} | Duplicates Removed: ${{ steps.combine_quotes.outputs.duplicate_count }}"
+
+            if [[ -f "data/duplicates.log" ]]; then
+              git add data/duplicates.log
+              git commit -F - <<EOF
+[Update] Total: ${{ steps.combine_quotes.outputs.total_quotes }} | Duplicates Removed: ${{ steps.combine_quotes.outputs.duplicate_count }}
+
+Duplicate log:
+$(cat data/duplicates.log)
+EOF
+            else
+              git commit -m "[Update] Total: ${{ steps.combine_quotes.outputs.total_quotes }} | No Duplicates Found"
+            fi
+
             git push
           else
             echo "No changes to commit"
