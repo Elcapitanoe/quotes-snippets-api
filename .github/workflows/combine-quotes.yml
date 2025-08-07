@@ -25,7 +25,6 @@ jobs:
           ID=1
           echo "[" > data/quotes.json
           first=1
-          tmpfile=$(mktemp)
           dupelog="data/duplicates.log"
           > "$dupelog"
 
@@ -83,16 +82,20 @@ jobs:
           if [[ `git status --porcelain` ]]; then
             git add data/quotes.json data/quotes.min.json
 
-            if [[ -f "data/duplicates.log" ]]; then
-              git add data/duplicates.log
-              git commit -F - <<EOF
-[Update] Total: ${{ steps.combine_quotes.outputs.total_quotes }} | Duplicates Removed: ${{ steps.combine_quotes.outputs.duplicate_count }}
+            TOTAL=${{ steps.combine_quotes.outputs.total_quotes }}
+            DUPS=${{ steps.combine_quotes.outputs.duplicate_count }}
 
-Duplicate log:
-$(cat data/duplicates.log)
-EOF
+            if [[ -f "data/duplicates.log" && -s "data/duplicates.log" ]]; then
+              git add data/duplicates.log
+
+              echo "[Update] Total: $TOTAL | Duplicates Removed: $DUPS" > commit-msg.txt
+              echo "" >> commit-msg.txt
+              echo "Duplicate log (max 100 lines):" >> commit-msg.txt
+              head -n 100 data/duplicates.log >> commit-msg.txt
+
+              git commit -F commit-msg.txt
             else
-              git commit -m "[Update] Total: ${{ steps.combine_quotes.outputs.total_quotes }} | No Duplicates Found"
+              git commit -m "[Update] Total: $TOTAL | No Duplicates Found"
             fi
 
             git push
