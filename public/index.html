@@ -1,295 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Quotes API</title>
-    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/quotes.png">
+    <title>Random Quotes API</title>
+    <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            max-width: 720px;
+            margin: 60px auto;
+            padding: 0 24px;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0.2em;
         }
 
-        .header {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            color: white;
-            padding: 40px 30px;
-            text-align: center;
+        code {
+            background: #f5f5f5;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-family: monospace;
         }
 
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 300;
-        }
-
-        .header p {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-
-        .content {
-            padding: 40px 30px;
-        }
-
-        .quote-section {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .quote-container {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 30px;
-            margin: 20px 0;
-            border-left: 5px solid #4facfe;
-            min-height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .quote-text {
-            font-size: 1.3em;
-            font-style: italic;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        .quote-author {
-            font-size: 1.1em;
-            color: #7f8c8d;
-            font-weight: 500;
-        }
-
-        .quote-author::before {
-            content: "— ";
-        }
-
-        .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.1em;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        .loading {
-            opacity: 0.6;
-            pointer-events: none;
-        }
-
-        .api-info {
-            background: #e8f4fd;
-            border-radius: 10px;
-            padding: 25px;
-            margin-top: 30px;
-        }
-
-        .api-info h3 {
-            color: #2980b9;
-            margin-bottom: 15px;
-        }
-
-        .api-info code {
-            background: #34495e;
-            color: #ecf0f1;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-        }
-
-        .api-info pre {
-            background: #2c3e50;
-            color: #ecf0f1;
-            padding: 15px;
-            border-radius: 8px;
+        pre {
+            background: #f8f8f8;
+            padding: 12px;
+            border-radius: 6px;
             overflow-x: auto;
-            margin: 10px 0;
         }
 
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-            flex-wrap: wrap;
+        a {
+            color: #0070f3;
+            text-decoration: none;
         }
 
-        .stat {
-            text-align: center;
-            padding: 10px;
+        a:hover {
+            text-decoration: underline;
         }
 
-        .stat-number {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #4facfe;
-        }
-
-        .stat-label {
+        footer {
+            margin-top: 48px;
             font-size: 0.9em;
-            color: #7f8c8d;
-        }
-
-        @media (max-width: 600px) {
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .content {
-                padding: 20px;
-            }
-            
-            .quote-container {
-                padding: 20px;
-            }
-        }
-
-        .htmx-indicator {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .htmx-request .htmx-indicator {
-            opacity: 1;
-        }
-
-        .htmx-request.loading {
-            opacity: 0.6;
+            color: #888;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Random Quotes API</h1>
-            <p>Discover inspiration with every click • Powered by Go & HTMX</p>
-        </div>
-        
-        <div class="content">
-            <div class="quote-section">
-                <div id="quote-display" class="quote-container">
-                    <div class="quote-text">Click the button below to get your first inspirational quote!</div>
-                    <div class="quote-author">Ready when you are</div>
-                </div>
-                
-                <button 
-                    class="btn" 
-                    hx-get="/api" 
-                    hx-target="#quote-display" 
-                    hx-swap="innerHTML"
-                    hx-indicator="#loading-indicator">
-                    <span class="htmx-indicator" id="loading-indicator">Loading...</span>
-                    <span>Get New Quote</span>
-                </button>
-            </div>
+    <h1>Random Quotes API</h1>
+    <p>A lightweight public API that delivers random inspirational quotes in JSON format.</p>
 
-            <div class="api-info">
-                <h3>🚀 API Information</h3>
-                <p><strong>Endpoint:</strong> <code>GET /api</code></p>
-                <p><strong>Response Format:</strong></p>
-                <pre>{
-  "id": "000001",
-  "from": "Albert Einstein", 
-  "quote": "Imagination is more important than knowledge.",
-  "responseTime": "2.456ms"
+    <h2>API Endpoint</h2>
+    <p><code>GET https://quotes.domiadi.com/api</code></p>
+
+    <h2>Sample Response</h2>
+    <pre>{
+  "id": 1,
+  "from": "Albert Einstein",
+  "quote": "Imagination is more important than knowledge."
+  "responseTime": "1.100ms"
 }</pre>
-                
-                <div class="stats">
-                    <div class="stat">
-                        <div class="stat-number">1000+</div>
-                        <div class="stat-label">Quotes Available</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">&lt;50ms</div>
-                        <div class="stat-label">Response Time</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">Go</div>
-                        <div class="stat-label">Powered By</div>
-                    </div>
-                </div>
 
-                <p><strong>Features:</strong></p>
-                <ul style="margin: 10px 0; padding-left: 20px;">
-                    <li>✅ No authentication required</li>
-                    <li>✅ CORS enabled for cross-origin requests</li>
-                    <li>✅ Fast response times with in-memory caching</li>
-                    <li>✅ Automatic quote rotation</li>
-                    <li>✅ Built with Go for optimal performance</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <h2>How to Use</h2>
+    <ul>
+        <li>Send a <strong>GET</strong> request to the API URL above</li>
+        <li>Receive one random quote per request in JSON format</li>
+        <li>No authentication or API key required</li>
+    </ul>
 
-    <script>
-        // Custom HTMX response handler for quotes
-        document.body.addEventListener('htmx:beforeSwap', function(evt) {
-            if (evt.detail.xhr.status === 200) {
-                try {
-                    const data = JSON.parse(evt.detail.xhr.responseText);
-                    if (data.quote && data.from) {
-                        evt.detail.target.innerHTML = `
-                            <div class="quote-text">"${data.quote}"</div>
-                            <div class="quote-author">${data.from}</div>
-                        `;
-                        evt.detail.shouldSwap = false; // Prevent default swap
-                    }
-                } catch (e) {
-                    console.error('Error parsing quote response:', e);
-                }
-            }
-        });
+    <h2>How to Contribute Quotes</h2>
+    <p>Fork this <a href="https://github.com/Elcapitanoe/quotes-snippets-api" target="_blank">repository on GitHub</a> and submit a Pull Request with your quotes file.</p>
+    <ul>
+        <li>Check the last used ID in the <code>/assets</code> folder</li>
+        <li>Create a file: <code>quotes-&lt;startid&gt;-&lt;endid&gt;.txt</code></li>
+        <li>Use this format per line: <code>ID|Full Name|Your Quote</code></li>
+    </ul>
+    <p>Rules:</p>
+    <ul>
+        <li>Name must contain at least 2 words</li>
+        <li>Quotes must be in English and at least 5 words</li>
+        <li>One quote per line only</li>
+    </ul>
 
-        // Handle errors
-        document.body.addEventListener('htmx:responseError', function(evt) {
-            evt.detail.target.innerHTML = `
-                <div class="quote-text">Sorry, couldn't fetch a quote right now.</div>
-                <div class="quote-author">Please try again</div>
-            `;
-        });
 
-        // Auto-load first quote after page load
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(() => {
-                document.querySelector('.btn').click();
-            }, 1000);
-        });
-    </script>
+    <footer>
+        &copy; 2025 <a href="https://domiadi.com" target="_blank">Domi Adiwijaya</a>
+    </footer>
 </body>
+
 </html>

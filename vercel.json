@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "^/api(?:/.*)?$",
+      "dest": "/api/quotes.js"
+    },
+    {
+      "src": "/data/.*",
+      "status": 404
+    },
+    {
+      "src": "/assets/.*",
+      "status": 404
+    }
+  ]
+}
