@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
+const { performance } = require('perf_hooks');
 
 module.exports = (req, res) => {
+  const startTime = performance.now();
+
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -28,10 +31,14 @@ module.exports = (req, res) => {
 
     const [id, from, quoteText] = parts;
 
+    const endTime = performance.now();
+    const responseTime = (endTime - startTime).toFixed(3);
+
     res.status(200).json({
       id: Number(id),
       from: from.trim(),
-      quote: quoteText.trim()
+      quote: quoteText.trim(),
+      responseTime: `${responseTime}ms`
     });
   } catch (err) {
     console.error(err);
