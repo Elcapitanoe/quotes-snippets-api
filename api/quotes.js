@@ -25,7 +25,7 @@ module.exports = (req, res) => {
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
     const endTime = performance.now();
-    const responseTime = (endTime - startTime).toFixed(3);
+    const responseTime = Math.round(Date.now() - startTime) + 'ms';
 
     res.status(200).json({
       ...randomQuote,
