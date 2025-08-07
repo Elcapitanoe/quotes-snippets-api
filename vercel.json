@@ -6,7 +6,7 @@
       "dest": "/api/quotes.js"
     },
     {
-      "src": "/assets/.*\\.txt$",
+      "src": "/output/.*",
       "status": 404
     }
   ]
