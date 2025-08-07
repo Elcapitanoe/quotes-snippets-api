@@ -6,7 +6,11 @@
       "dest": "/api/quotes.js"
     },
     {
-      "src": "/output/.*",
+      "src": "/data/.*",
+      "status": 404
+    },
+    {
+      "src": "/assets/.*",
       "status": 404
     }
   ]
