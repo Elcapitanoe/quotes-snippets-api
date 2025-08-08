@@ -4,16 +4,17 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
-    target: 'es2015',
+    target: 'esnext',
     rollupOptions: {
       input: './index.html'
     },
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    minify: true
   },
   server: {
     port: 3000,
     open: true
   },
-  base: './',
+  base: '/',
   publicDir: 'public'
 })

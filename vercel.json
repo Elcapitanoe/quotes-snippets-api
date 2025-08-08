@@ -14,6 +14,12 @@
       "status": 404
     },
     {
+      "src": "/assets/(.*)",
+      "headers": {
+        "Content-Type": "application/javascript"
+      }
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
