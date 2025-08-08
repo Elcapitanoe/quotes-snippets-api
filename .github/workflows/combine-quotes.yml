@@ -3,7 +3,7 @@ name: Combine Quotes
 on:
   push:
     paths:
-      - 'assets/**'
+      - "assets/**"
   workflow_dispatch:
 
 permissions:
@@ -12,75 +12,54 @@ permissions:
 jobs:
   combine:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Combine, deduplicate, and convert to JSON
         id: combine_quotes
         run: |
           mkdir -p data
+          ID=1; first=1
+          datalog="data/data.log"; > "$datalog"
+          declare -A seen_quotes quote_ids_list
+          total_count=0; saved_count=0; duplicate_count=0
 
-          ID=1
           echo "[" > data/quotes.json
-          first=1
-
-          datalog="data/data.log"
-          > "$datalog"
-
-          declare -A seen_quotes
-          declare -A quote_ids_list
-
-          total_count=0
-          saved_count=0
-          duplicate_count=0
-
           for file in assets/*.txt; do
             while IFS= read -r line; do
               [ -z "$line" ] && continue
-              total_count=$((total_count + 1))
-
+              total_count=$((total_count+1))
               IFS='|' read -r original_id from quote <<< "$line"
               key="$quote"
-
               if [[ -n "${seen_quotes["$key"]}" ]]; then
-                quote_ids_list["$key"]="${quote_ids_list["$key"]} $original_id"
+                quote_ids_list["$key"]+=" $original_id"
                 continue
               fi
-
               seen_quotes["$key"]=$original_id
               quote_ids_list["$key"]=$original_id
-
               new_id=$(printf "%06d" $ID)
               from_escaped=$(echo "$from" | sed 's/"/\\"/g')
               quote_escaped=$(echo "$quote" | sed 's/"/\\"/g')
-
               [ $first -eq 0 ] && echo "," >> data/quotes.json
               echo "  {\"id\": \"$new_id\", \"from\": \"$from_escaped\", \"quote\": \"$quote_escaped\"}" >> data/quotes.json
-
-              ID=$((ID + 1))
-              saved_count=$((saved_count + 1))
-              first=0
+              ID=$((ID+1)); saved_count=$((saved_count+1)); first=0
             done < "$file"
           done
-
           echo "]" >> data/quotes.json
           jq -c . data/quotes.json > data/quotes.min.json
 
-          echo "Total Assets: $total_count" >> "$datalog"
-          echo "Total Quotes Saved: $saved_count" >> "$datalog"
-          echo "Removed Duplicates: $((total_count - saved_count))" >> "$datalog"
-          echo "" >> "$datalog"
-          echo "Duplicates Found:" >> "$datalog"
+          {
+            echo "Total Assets: $total_count"
+            echo "Total Quotes Saved: $saved_count"
+            echo "Removed Duplicates: $((total_count - saved_count))"
+            echo ""; echo "Duplicates Found:"
+          } >> "$datalog"
 
           for quote in "${!quote_ids_list[@]}"; do
             ids="${quote_ids_list[$quote]}"
             count=$(echo "$ids" | wc -w)
             if [ "$count" -ge 2 ]; then
-              for id in $ids; do
-                echo "[$id] $quote" >> "$datalog"
-              done
+              for id in $ids; do echo "[$id] $quote" >> "$datalog"; done
               echo "" >> "$datalog"
               duplicate_count=$((duplicate_count + count - 1))
             fi
@@ -89,19 +68,16 @@ jobs:
           echo "total_quotes=$saved_count" >> $GITHUB_OUTPUT
           echo "duplicate_count=$duplicate_count" >> $GITHUB_OUTPUT
 
-      - name: Configure Git
-        run: |
+      - run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Commit and push if changed
         run: |
-          if [[ `git status --porcelain` ]]; then
+          if [[ $(git status --porcelain) ]]; then
             git add data/quotes.json data/quotes.min.json data/data.log
-
             TOTAL=${{ steps.combine_quotes.outputs.total_quotes }}
             DUPS=${{ steps.combine_quotes.outputs.duplicate_count }}
-
             git commit -m "[Update] Total: $TOTAL | Duplicates Removed: $DUPS"
             git push
           else
