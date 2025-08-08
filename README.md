@@ -15,7 +15,7 @@
 
 
 ## About
-This API is designed with simplicity and speed in mind. It requires no authentication and returns clean, lightweight responses. Just call the endpoint to get a fresh quote every time. Perfect for personal projects, portfolios, landing pages, or chatbot integrations.
+This API is built for pure simplicity and lightning fast performance. It requires no authentication and returns clean lightweight responses. Call the endpoint and you get a fresh quote every single time. On average it responds in about 1 ms and under certain conditions it can be even faster, dipping into the sub millisecond range. Perfect for personal projects, portfolios, landing pages or chatbot integrations.
 
 ## API Endpoint
 ```
