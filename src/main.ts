@@ -85,7 +85,7 @@ class QuotesApp {
       <p>Fork this <a href="https://github.com/Elcapitanoe/quotes-snippets-api" target="_blank">repository on GitHub</a> and submit a Pull Request with your quotes file.</p>
       <ul>
         <li>Check the last used ID in the <code>/assets</code> folder</li>
-        <li>Create a file: <code>quotes-<startid>-<endid>.txt</code></li>
+        <li>Create a file: <code>(number)-quotes.txt</code></li>
         <li>Use this format per line: <code>ID|Full Name|Your Quote</code></li>
       </ul>
       <p>Rules:</p>
