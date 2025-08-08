@@ -6,18 +6,18 @@
       "dest": "/api/quotes.ts"
     },
     {
-      "src": "/data/.*",
-      "status": 404
-    },
-    {
-      "src": "/assets/.*",
-      "status": 404
-    },
-    {
       "src": "/assets/(.*)",
       "headers": {
         "Content-Type": "application/javascript"
       }
+    },
+    {
+      "src": "/data/.*",
+      "status": 404
+    },
+    {
+      "src": "/assets/.*\\.txt$",
+      "status": 404
     },
     {
       "src": "/(.*)",
