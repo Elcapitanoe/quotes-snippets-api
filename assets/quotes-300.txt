@@ -1,0 +1,100 @@
+201|LeBron James|I like criticism. It makes you strong.
+202|Kobe Bryant|The most important thing is to try and inspire people so that they can be great in whatever they want to do.
+203|Serena Williams|I decided I can't pay a person to rewind time, so I may as well get over it.
+204|Tiger Woods|No matter how good you get you can always get better and that's the exciting part.
+205|Roger Federer|There is no way around the hard work. Embrace it.
+206|Usain Bolt|I don't think limits.
+207|Simone Biles|I'd rather regret the risks that didn't work out than the chances I didn't take at all.
+208|Tom Brady|I think that at the start of a game, you're always playing to win, and then maybe if you're ahead late in the game, you start playing not to lose.
+209|Richard Branson|If somebody offers you an amazing opportunity but you are not sure you can do it, say yes – then learn how to do it later!
+210|Peter Drucker|The best way to predict the future is to create it.
+211|Seth Godin|The cost of being wrong is less than the cost of doing nothing.
+212|Guy Kawasaki|The best reason to start an organization is to make meaning; to create a product or service to make the world a better place.
+213|Tim Ferriss|What we fear doing most is usually what we most need to do.
+214|Gary Vaynerchuk|Your legacy is being written by yourself. Make the right decisions.
+215|Brene Brown|Vulnerability is not winning or losing; it's having the courage to show up and be seen when we have no control over the outcome.
+216|Simon Sinek|People don't buy what you do; they buy why you do it.
+217|Jordan Peterson|Compare yourself to who you were yesterday, not to who someone else is today.
+218|Naval Ravikant|A fit body, a calm mind, a house full of love. These things cannot be bought - they must be earned.
+219|Sam Altman|The most successful people I know are primarily driven by a deep belief that they’re on a mission to have a positive impact.
+220|Paul Graham|Live in the future, then build what's missing.
+221|Reid Hoffman|An entrepreneur is someone who jumps off a cliff and builds a plane on the way down.
+222|Eric Schmidt|Your most unhappy customers are your greatest source of learning.
+223|Sheryl Sandberg|Done is better than perfect.
+224|Marissa Mayer|I always did something I was a little not ready to do. I think that's how you grow.
+225|Indra Nooyi|The distance between number one and number two is always a constant.
+226|Mary Barra|Do every job you're in like you're going to do it for the rest of your life, and demonstrate that ownership of it.
+227|Ginni Rometty|Growth and comfort do not coexist.
+228|Satya Nadella|Our industry does not respect tradition. It only respects innovation.
+229|Sundar Pichai|A person who is happy is not because everything is right in his life, he is happy because his attitude towards everything in his life is right.
+230|Tim Cook|Life is fragile. We're not guaranteed a tomorrow so give it everything you've got.
+231|Larry Page|If you're changing the world, you're working on important things. You're excited to get up in the morning.
+232|Sergey Brin|Solving big problems is easier than solving small problems.
+233|Jack Dorsey|Expect the unexpected. And whenever possible, be the unexpected.
+234|Evan Spiegel|It's not about working harder; it's about working the system.
+235|Brian Chesky|Culture is simply a shared way of doing something with a passion.
+236|Travis Kalanick|Stand by your principles and be comfortable with confrontation.
+237|Reed Hastings|Most entrepreneurial ideas will sound crazy, stupid and uneconomic, and then they’ll turn out to be right.
+238|Marc Benioff|The secret to successful hiring is this: look for the people who want to change the world.
+239|Michael Dell|It's through curiosity and looking at opportunities in new ways that we've always mapped our path.
+240|Meg Whitman|The price of inaction is far greater than the cost of a mistake.
+241|Carly Fiorina|The highest calling of leadership is to unlock the potential of others.
+242|Jack Ma|If you don't give up, you still have a chance.
+243|Masayoshi Son|The person who has the most information and the most faith will be the victor.
+244|Li Ka-shing|The first thing you should do is to find a good boss. A good boss is better than a good company.
+245|Tadashi Yanai|I might look successful, but I've made many mistakes. People take their failures too seriously.
+246|Akio Morita|Don't be afraid to make a mistake. But make sure you don't make the same mistake twice.
+247|Soichiro Honda|If you make a superior product, people will buy it.
+248|Eiji Toyoda|Useless meetings are the first thing to go.
+249|Henry Royce|Strive for perfection in everything you do. Take the best that exists and make it better.
+250|Enzo Ferrari|I have yet to meet a man I couldn't learn something from.
+251|Ferdinand Porsche|I couldn't find the sports car of my dreams, so I built it myself.
+252|Karl Benz|The love of inventing never dies.
+253|Gottlieb Daimler|The best or nothing.
+254|Louis Chevrolet|Never give up.
+255|Walter Chrysler|The real secret of success is enthusiasm.
+256|Horace Dodge|It's a great thing to be a human being.
+257|David Packard|Take risks. Ask big questions. Don't be afraid to make mistakes; if you don't make mistakes, you're not reaching far enough.
+258|William Hewlett|The greatest success goes to the person who is not afraid to fail in front of even the largest audience.
+259|Gordon Moore|The number of transistors on a microchip doubles about every two years, though the cost of computers is halved.
+260|Andy Grove|Success breeds complacency. Complacency breeds failure. Only the paranoid survive.
+261|Steve Wozniak|Wherever smart people work, doors are unlocked.
+262|Linus Torvalds|Talk is cheap. Show me the code.
+263|Richard Stallman|Sharing is good, and with digital technology, sharing is easy.
+264|Jimmy Wales|Imagine a world in which every single person on the planet is given free access to the sum of all human knowledge. That's what we're doing.
+265|Larry Sanger|When you don't know something, you can go to the library and look it up. But what if there is no library?
+266|Julian Assange|If you give a man a gun, he can rob a bank. If you give a man a bank, he can rob the world.
+267|Edward Snowden|I don't want to live in a world where everything I say, everything I do... is recorded.
+268|Chelsea Manning|We're all human beings, and we all have a right to dignity and respect.
+269|Aaron Swartz|Information is power. But like all power, there are those who want to keep it for themselves.
+270|Thomas Jefferson|I cannot live without books.
+271|James Madison|The advancement and diffusion of knowledge is the only guardian of true liberty.
+272|Alexander Hamilton|Those who stand for nothing fall for anything.
+273|John Adams|Facts are stubborn things; and whatever may be our wishes, our inclinations, or the dictates of our passion, they cannot alter the state of facts and evidence.
+274|Benjamin Disraeli|The fool wonders, the wise man asks.
+275|William Gladstone|To be engaged in opposing wrong affords but a slender guarantee for being right.
+276|Clement Attlee|Democracy is not merely the law of the majority, but the law of the majority respecting the rights of the minority.
+277|Neville Chamberlain|In war, whichever side may call itself the victor, there are no winners, but all are losers.
+278|David Lloyd George|The finest eloquence is that which gets things done.
+279|Otto von Bismarck|Laws are like sausages, it is better not to see them being made.
+280|Napoleon Bonaparte|A leader is a dealer in hope.
+281|Julius Caesar|I came, I saw, I conquered. (Veni, vidi, vici.)
+282|Alexander the Great|There is nothing impossible to him who will try.
+283|Cleopatra|I will not be triumphed over.
+284|Joan of Arc|I am not afraid... I was born to do this.
+285|Catherine the Great|I praise loudly. I blame softly.
+286|Peter the Great|I have conquered an empire, but I have not been able to conquer myself.
+287|Genghis Khan|The strength of a wall is neither greater nor less than the courage of the men who defend it.
+288|Attila the Hun|There, where I have passed, the grass will never grow again.
+289|Hannibal Barca|I will either find a way or make one.
+290|Scipio Africanus|Prepare for war, if you desire peace.
+291|Marcus Aurelius|The happiness of your life depends upon the quality of your thoughts.
+292|Seneca|Luck is what happens when preparation meets opportunity.
+293|Epictetus|It's not what happens to you, but how you react to it that matters.
+294|Cicero|A room without books is like a body without a soul.
+295|Heraclitus|The only constant in life is change.
+296|Pythagoras|Do not say a little in many words but a great deal in a few.
+297|Archimedes|Give me a lever long enough and a fulcrum on which to place it, and I shall move the world.
+298|Euclid|The laws of nature are but the mathematical thoughts of God.
+299|Galileo Galilei|And yet it moves.
+300|Nicolaus Copernicus|To know that we know what we know, and to know that we do not know what we do not know, that is true knowledge.

@@ -1,0 +1,100 @@
+101|George Bernard Shaw|Life isn't about finding yourself. Life is about creating yourself.
+102|Aesop|No act of kindness, no matter how small, is ever wasted.
+103|Henry David Thoreau|Go confidently in the direction of your dreams! Live the life you've imagined.
+104|John Muir|The mountains are calling and I must go.
+105|Ansel Adams|You don't take a photograph, you make it.
+106|Pablo Picasso|Every child is an artist. The problem is how to remain an artist once he grows up.
+107|Salvador Dali|Have no fear of perfection - you'll never reach it.
+108|Andy Warhol|They always say time changes things, but you actually have to change them yourself.
+109|Frida Kahlo|I paint my own reality.
+110|Georgia O'Keeffe|I found I could say things with color and shapes that I couldn't say any other way.
+111|Michelangelo|The greater danger for most of us lies not in setting our aim too high and falling short; but in setting our aim too low, and achieving our mark.
+112|Ludwig van Beethoven|To play a wrong note is insignificant; to play without passion is inexcusable.
+113|Wolfgang Amadeus Mozart|The music is not in the notes, but in the silence between.
+114|Johann Sebastian Bach|The aim and final end of all music should be none other than the glory of God and the refreshment of the soul.
+115|Coco Chanel|In order to be irreplaceable one must always be different.
+116|Christian Dior|A woman's perfume tells more about her than her handwriting.
+117|Yves Saint Laurent|Fashions fade, style is eternal.
+118|Giorgio Armani|Elegance is not standing out, but being remembered.
+119|Sun Yat-sen|The key to success is action, and the essential in action is perseverance.
+120|Mao Zedong|A revolution is not a dinner party.
+121|Deng Xiaoping|It doesn't matter whether a cat is black or white, as long as it catches mice.
+122|W. E. B. Du Bois|The problem of the twentieth century is the problem of the color line.
+123|Booker T. Washington|If you want to lift yourself up, lift up someone else.
+124|Harriet Tubman|Every great dream begins with a dreamer.
+125|Rosa Parks|I have learned over the years that when one's mind is made up, this diminishes fear.
+126|Sojourner Truth|Ain't I a Woman?
+127|Frederick Douglass|If there is no struggle, there is no progress.
+128|Marcus Garvey|A people without the knowledge of their past history, origin and culture is like a tree without roots.
+129|Angela Davis|I am no longer accepting the things I cannot change. I am changing the things I cannot accept.
+130|James Baldwin|Not everything that is faced can be changed, but nothing can be changed until it is faced.
+131|Langston Hughes|Hold fast to dreams, for if dreams die, life is a broken-winged bird that cannot fly.
+122|Toni Morrison|If there's a book that you want to read, but it hasn't been written yet, then you must write it.
+133|Zora Neale Hurston|There are years that ask questions and years that answer.
+134|Audre Lorde|When I dare to be powerful, to use my strength in the service of my vision, then it becomes less and less important whether I am afraid.
+135|bell hooks|What we do is more important than what we say or what we say we believe.
+136|Noam Chomsky|If we don't believe in freedom of expression for people we despise, we don't believe in it at all.
+137|Howard Zinn|Small acts, when multiplied by millions of people, can transform the world.
+138|Gore Vidal|Style is knowing who you are, what you want to say, and not giving a damn.
+139|Truman Capote|Failure is the condiment that gives success its flavor.
+140|William Faulkner|To understand the world, you must first understand a place like Mississippi.
+141|Eudora Welty|All serious daring starts from within.
+142|Flannery O'Connor|The truth does not change according to our ability to stomach it.
+143|Jack Kerouac|The only people for me are the mad ones.
+144|Allen Ginsberg|Whoever controls the media, the images, controls the culture.
+145|William S. Burroughs|After one look at this planet any visitor from outer space would say 'I want to see the manager.'
+146|Hunter S. Thompson|Buy the ticket, take the ride.
+147|Charles Bukowski|Find what you love and let it kill you.
+148|Sylvia Plath|The worst enemy to creativity is self-doubt.
+149|Anne Sexton|Put your ear down close to your soul and listen hard.
+150|Emily Dickinson|Forever is composed of nows.
+151|Walt Whitman|Keep your face always toward the sunshine—and shadows will fall behind you.
+152|Edgar Allan Poe|All that we see or seem is but a dream within a dream.
+153|H.P. Lovecraft|The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown.
+154|Stephen King|Get busy living or get busy dying.
+155|Neil Gaiman|Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.
+156|Terry Pratchett|The trouble with having an open mind, of course, is that people will insist on coming along and trying to put things in it.
+157|Douglas Adams|I may not have gone where I intended to go, but I think I have ended up where I needed to be.
+158|Arthur C. Clarke|Any sufficiently advanced technology is indistinguishable from magic.
+159|Isaac Asimov|The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.
+160|Robert A. Heinlein|An armed society is a polite society.
+161|Philip K. Dick|Reality is that which, when you stop believing in it, doesn't go away.
+162|Kurt Vonnegut|We are what we pretend to be, so we must be careful about what we pretend to be.
+163|Ray Bradbury|You don't have to burn books to destroy a culture. Just get people to stop reading them.
+164|George R.R. Martin|A reader lives a thousand lives before he dies . . . The man who never reads lives only one.
+165|Ursula K. Le Guin|The only thing that makes life possible is permanent, intolerable uncertainty; not knowing what comes next.
+166|Octavia Butler|In order to rise from its own ashes, a Phoenix first must burn.
+167|Frank Herbert|Fear is the mind-killer.
+168|Stan Lee|With great power comes great responsibility.
+169|Gene Roddenberry|To boldly go where no one has gone before.
+170|George Lucas|Your focus determines your reality.
+171|Steven Spielberg|I don't dream at night, I dream all day; I dream for a living.
+172|Alfred Hitchcock|The only way to get rid of my fears is to make films about them.
+173|Stanley Kubrick|If it can be written, or thought, it can be filmed.
+174|Akira Kurosawa|In a mad world, only the mad are sane.
+175|Hayao Miyazaki|Life is a winking light in the darkness.
+176|Charlie Chaplin|A day without laughter is a day wasted.
+177|Lucille Ball|Love yourself first and everything else falls into line.
+178|Marilyn Monroe|Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.
+179|Audrey Hepburn|The most important thing is to enjoy your life—to be happy—it's all that matters.
+180|Grace Kelly|The idea of my life as a fairytale is itself a fairytale.
+181|James Dean|Dream as if you'll live forever. Live as if you'll die today.
+182|Marlon Brando|Only the one who wanders finds new paths.
+183|Clint Eastwood|Respect your efforts, respect yourself. Self-respect leads to self-discipline.
+184|John Wayne|Courage is being scared to death, but saddling up anyway.
+185|Frank Sinatra|The best revenge is massive success.
+186|Elvis Presley|Values are like fingerprints. Nobody's are the same, but you leave 'em all over everything you do.
+187|David Bowie|I don't know where I'm going from here, but I promise it won't be boring.
+188|Prince|A strong spirit transcends rules.
+189|Michael Jackson|In a world filled with hate, we must still dare to hope.
+190|Madonna|I'm tough, I'm ambitious, and I know exactly what I want. If that makes me a bitch, okay.
+191|Beyoncé|If you're not confident, you're not going to be happy.
+192|Taylor Swift|If you're lucky enough to be different, never change.
+193|Lady Gaga|Don't you ever let a soul in the world tell you that you can't be exactly who you are.
+194|Rihanna|The minute you learn to love yourself you won't want to be anyone else.
+195|Kanye West|I am God's vessel. But my greatest pain in life is that I will never be able to see myself perform live.
+196|Jay-Z|I'm not a businessman; I'm a business, man.
+197|Drake|Jealousy is just love and hate at the same time.
+198|Kendrick Lamar|We all get distracted, the question is, would you bounce back or bounce backwards?
+199|Billie Eilish|I've always done whatever I want and always been exactly who I am.
+200|Snoop Dogg|If it's flipping hamburgers at McDonald's, be the best hamburger flipper in the world.

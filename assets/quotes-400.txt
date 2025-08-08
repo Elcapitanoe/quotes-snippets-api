@@ -1,0 +1,100 @@
+301|Johannes Kepler|The diversity of the phenomena of nature is so great, and the treasures hidden in the heavens so rich, precisely in order that the human mind shall never be lacking in fresh nourishment.
+302|Charles Darwin|It is not the strongest of the species that survives, nor the most intelligent; it is the one most adaptable to change.
+303|Gregor Mendel|My scientific studies have afforded me great gratification; and I am convinced that it will not be long before the whole world acknowledges the results of my work.
+304|Louis Pasteur|Chance favors the prepared mind.
+305|Joseph Lister|It is our proud office to tend the sick, not to destroy them.
+306|Alexander Fleming|One sometimes finds what one is not looking for.
+307|Albert Schweitzer|The purpose of human life is to serve, and to show compassion and the will to help others.
+308|Florence Nightingale|I attribute my success to this: I never gave or took any excuse.
+309|Clara Barton|I may sometimes be willing to teach for nothing, but if paid at all, I shall never do a man's work for less than a man's pay.
+310|Elizabeth Blackwell|If society will not admit of woman's free development, then society must be remodeled.
+311|Rosalind Franklin|Science and everyday life cannot and should not be separated.
+312|Ada Lovelace|The Analytical Engine has no pretensions whatever to originate anything. It can do whatever we know how to order it to perform.
+313|Grace Hopper|The most dangerous phrase in the language is, 'We've always done it this way.'
+314|Katherine Johnson|I don't have a feeling of inferiority. Never had. I'm as good as anybody, but no better.
+315|Mae Jemison|Never be limited by other people's limited imaginations.
+316|Sally Ride|The stars don't look bigger, but they do look brighter.
+317|Valentina Tereshkova|If women can be railroad workers in Russia, why can't they fly in space?
+318|Yuri Gagarin|I see Earth! It is so beautiful.
+319|Alan Shepard|It's a very sobering feeling to be up in space and realize that one's safety factor was determined by the lowest bidder on a government contract.
+320|John Glenn|I don't know what you could say about a day in which you have seen four beautiful sunsets.
+321|Buzz Aldrin|Magnificent desolation.
+322|Michael Collins|The thing I remember most is the view of planet Earth from a great distance.
+323|Chris Hadfield|Ultimately, leadership is not about glorious crowning acts. It's about keeping your team focused on a goal and motivated to do their best to achieve it.
+324|Scott Kelly|After a year in space, I'm no longer a Star Wars guy. I'm more of a Star Trek guy.
+325|Neil deGrasse Tyson|The good thing about science is that it's true whether or not you believe in it.
+326|Bill Nye|Everyone you will ever meet knows something you don't.
+327|Richard Feynman|The first principle is that you must not fool yourself and you are the easiest person to fool.
+328|J. Robert Oppenheimer|Now I am become Death, the destroyer of worlds.
+329|Enrico Fermi|Before I came here I was confused about this subject. Having listened to your lecture I am still confused. But on a higher level.
+330|Max Planck|A new scientific truth does not triumph by convincing its opponents and making them see the light, but rather because its opponents eventually die, and a new generation grows up that is familiar with it.
+331|Werner Heisenberg|What we observe is not nature itself, but nature exposed to our method of questioning.
+332|Erwin Schrödinger|The task is, not so much to see what no one has yet seen; but to think what nobody has yet thought, about that which everybody sees.
+333|Paul Dirac|God used beautiful mathematics in creating the world.
+334|Niels Bohr|An expert is a man who has made all the mistakes which can be made in a very narrow field.
+335|Murray Gell-Mann|Think how hard physics would be if particles could think.
+336|Richard Dawkins|The universe we observe has precisely the properties we should expect if there is, at bottom, no design, no purpose, no evil, no good, nothing but blind, pitiless indifference.
+337|Sam Harris|The only thing that permits human beings to collaborate with one another in a truly open-ended way is their willingness to have their beliefs modified by new facts.
+338|Christopher Hitchens|What can be asserted without evidence can also be dismissed without evidence.
+339|Daniel Dennett|There is no such thing as philosophy-free science; there is only science whose philosophical baggage is taken on board without examination.
+340|Immanuel Kant|Act only according to that maxim whereby you can, at the same time, will that it should become a universal law.
+341|David Hume|Beauty in things exists in the mind which contemplates them.
+342|John Locke|No man's knowledge here can go beyond his experience.
+343|Thomas Hobbes|The life of man, solitary, poor, nasty, brutish, and short.
+344|Jean-Jacques Rousseau|Man is born free and everywhere he is in chains.
+345|Baruch Spinoza|The highest activity a human being can attain is learning for understanding, because to understand is to be free.
+346|Gottfried Wilhelm Leibniz|Nothing is in the intellect that was not first in the senses.
+347|Arthur Schopenhauer|A man can be himself only so long as he is alone.
+348|Søren Kierkegaard|Life is not a problem to be solved, but a reality to be experienced.
+349|Jean-Paul Sartre|Man is condemned to be free; because once thrown into the world, he is responsible for everything he does.
+350|Ludwig Wittgenstein|Whereof one cannot speak, thereof one must be silent.
+351|Bertrand Russell|The whole problem with the world is that fools and fanatics are always so certain of themselves, and wiser people so full of doubts.
+352|Ayn Rand|The question isn't who is going to let me; it's who is going to stop me.
+353|Hannah Arendt|The sad truth is that most evil is done by people who never make up their minds to be good or evil.
+354|Susan Sontag|I haven't been everywhere, but it's on my list.
+355|Camille Paglia|A woman simply is, but a man must become.
+356|Gloria Steinem|The truth will set you free, but first it will piss you off.
+357|Betty Friedan|The only way for a woman, as for a man, to find herself, to know herself as a person, is by creative work of her own.
+358|Ruth Bader Ginsburg|Fight for the things that you care about, but do it in a way that will lead others to join you.
+359|Sonia Sotomayor|There are uses to adversity, and they don't reveal themselves until tested.
+360|Elena Kagan|To be a judge, you have to be a person of reason and balance.
+361|Sandra Day O'Connor|The power I exert on the Court depends on the power of my arguments, not on my gender.
+362|Thurgood Marshall|In recognizing the humanity of our fellow beings, we pay ourselves the highest tribute.
+363|Earl Warren|It is the spirit and not the form of law that keeps justice alive.
+364|Oliver Wendell Holmes, Jr.|The life of the law has not been logic; it has been experience.
+365|John Marshall|The power to tax is the power to destroy.
+366|Adam Smith|It is not from the benevolence of the butcher, the brewer, or the baker that we expect our dinner, but from their regard to their own interest.
+367|John Maynard Keynes|The difficulty lies not in the new ideas, but in escaping from the old ones.
+368|Milton Friedman|The most important single central fact about a free market is that no exchange takes place unless both parties benefit.
+369|Friedrich Hayek|The curious task of economics is to demonstrate to men how little they really know about what they imagine they can design.
+370|Karl Marx|The philosophers have only interpreted the world, in various ways. The point, however, is to change it.
+371|Vladimir Lenin|A lie told often enough becomes the truth.
+372|Joseph Stalin|The death of one man is a tragedy. The death of millions is a statistic.
+373|Leon Trotsky|The end may justify the means as long as there is something that justifies the end.
+374|Mikhail Gorbachev|It is better to discuss things, to argue and engage in polemics than make perhaps fatal errors.
+375|Fidel Castro|I find capitalism repugnant. It is filthy, it is gross, it is alienating... because it causes war, hypocrisy and competition.
+376|Che Guevara|The revolution is not an apple that falls when it is ripe. You have to make it fall.
+377|Ho Chi Minh|To reap a return in ten years, plant trees. To reap a return in 100, cultivate the people.
+378|Pol Pot|He who protests is an enemy; he who opposes is a corpse.
+379|Kim Il Sung|The revolution is a struggle for the people's freedom and happiness.
+380|Anwar Sadat|There can be hope only for a society which acts as one big family, not as many separate ones.
+381|Golda Meir|Don't be so humble - you are not that great.
+382|Yitzhak Rabin|You don't make peace with friends. You make it with very unsavory enemies.
+383|Shimon Peres|For me, dreaming is simply being pragmatic.
+384|Benjamin Netanyahu|The truth is that if Israel were to put down its arms, there would be no more Israel.
+385|Yasser Arafat|I have come bearing an olive branch and a freedom fighter's gun. Do not let the olive branch fall from my hand.
+386|Mahmoud Abbas|We will not bend or fail.
+387|King Hussein of Jordan|The challenge is to practice politics as the art of making what appears to be impossible, possible.
+388|Recep Tayyip Erdogan|Our vision is to make the 21st century a century of peace.
+389|Bashar al-Assad|The problem is not the occupation, but the occupation mentality.
+390|Muammar Gaddafi|Mankind must have a new beginning.
+391|Saddam Hussein|Politics is when you say you are going to do one thing while intending to do another. Then you do neither what you said nor what you intended.
+392|Ayatollah Khomeini|There is no fun in Islam.
+393|Ali Khamenei|The first and most important duty of the media is to be truthful.
+394|Osama bin Laden|Our terrorism is a response to the West's terrorism.
+395|Wael Ghonim|The power of the people is much stronger than the people in power.
+396|Tawakkol Karman|The solution for women's issues is not in separation, but in the full integration of women in all aspects of society.
+397|Shirin Ebadi|Human rights is a universal standard. It is a component of every religion and every civilization.
+398|Aung San Suu Kyi|It is not power that corrupts but fear.
+399|Kofi Annan|To live is to choose. But to choose well, you must know who you are and what you stand for, where you want to go and why you want to get there.
+400|Ban Ki-moon|Saving our planet, lifting people out of poverty, advancing economic growth... these are one and the same fight.
