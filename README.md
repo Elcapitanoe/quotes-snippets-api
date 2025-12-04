@@ -6,8 +6,6 @@
 <h3 align="center">Quotes Snippets API</h3>
 
 <p align="center">
-  <a href="https://quotes.domiadi.com"">Submit Your Quote</a>
-  &nbsp;|&nbsp;
   <a href="https://github.com/Elcapitanoe/quotes-snippets-api/issues">Bug Report</a>
   &nbsp;|&nbsp;
   <a href="https://github.com/Elcapitanoe/quotes-snippets-api/discussions">Discussions</a>
@@ -19,5 +17,4 @@ This API is built for pure simplicity and lightning fast performance. It require
 
 ## API Endpoint
 ```
-GET https://quotes.domiadi.com/api
-```
+GET https://quotes-api.domiadi.com/
