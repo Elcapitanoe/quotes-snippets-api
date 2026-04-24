@@ -17,4 +17,4 @@ This API is built for pure simplicity and lightning fast performance. It require
 
 ## API Endpoint
 ```
-GET https://quotes-api.domiadi.com/
+GET https://quotes.domi.my.id
