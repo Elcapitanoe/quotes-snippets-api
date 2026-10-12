@@ -25,9 +25,8 @@
     }
   ],
   "functions": {
-    "api/quotes.ts": {
-      "runtime": "@vercel/node@3.2.17",
-      "maxDuration": 10
+  "api/quotes.ts": {
+    "maxDuration": 10
     }
   },
   "buildCommand": "npm run build",
