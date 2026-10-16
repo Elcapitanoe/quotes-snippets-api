@@ -22,5 +22,8 @@
     "api",
     "vercel",
     "inspirational"
-  ]
+  ],
+  "devDependencies": {
+    "wrangler": "^4.151.0"
+  }
 }
