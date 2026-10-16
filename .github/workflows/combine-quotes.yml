@@ -1,85 +1,48 @@
-name: Combine Quotes
+name: Build quote dataset
 
 on:
   push:
     paths:
-      - "assets/**"
+      - "assets/*.txt"
+      - "assets/**/*.txt"
+      - "scripts/build-quotes.mjs"
+      - "package.json"
+      - ".github/workflows/combine-quotes.yml"
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: quote-dataset-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
-  combine:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out repository
+        uses: actions/checkout@v7
 
-      - name: Combine, deduplicate, and convert to JSON
-        id: combine_quotes
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Regenerate quote data
         run: |
-          mkdir -p data
-          ID=1; first=1
-          datalog="data/data.log"; > "$datalog"
-          declare -A seen_quotes quote_ids_list
-          total_count=0; saved_count=0; duplicate_count=0
+          npm run data:build
+          npm run check
 
-          echo "[" > data/quotes.json
-          for file in assets/*.txt; do
-            while IFS= read -r line; do
-              [ -z "$line" ] && continue
-              total_count=$((total_count+1))
-              IFS='|' read -r original_id from quote <<< "$line"
-              key="$quote"
-              if [[ -n "${seen_quotes["$key"]}" ]]; then
-                quote_ids_list["$key"]+=" $original_id"
-                continue
-              fi
-              seen_quotes["$key"]=$original_id
-              quote_ids_list["$key"]=$original_id
-              new_id=$(printf "%06d" $ID)
-              from_escaped=$(echo "$from" | sed 's/"/\\"/g')
-              quote_escaped=$(echo "$quote" | sed 's/"/\\"/g')
-              [ $first -eq 0 ] && echo "," >> data/quotes.json
-              echo "  {\"id\": \"$new_id\", \"from\": \"$from_escaped\", \"quote\": \"$quote_escaped\"}" >> data/quotes.json
-              ID=$((ID+1)); saved_count=$((saved_count+1)); first=0
-            done < "$file"
-          done
-          echo "]" >> data/quotes.json
-          jq -c . data/quotes.json > data/quotes.min.json
-
-          {
-            echo "Total Assets: $total_count"
-            echo "Total Quotes Saved: $saved_count"
-            echo "Removed Duplicates: $((total_count - saved_count))"
-            echo ""; echo "Duplicates Found:"
-          } >> "$datalog"
-
-          for quote in "${!quote_ids_list[@]}"; do
-            ids="${quote_ids_list[$quote]}"
-            count=$(echo "$ids" | wc -w)
-            if [ "$count" -ge 2 ]; then
-              for id in $ids; do echo "[$id] $quote" >> "$datalog"; done
-              echo "" >> "$datalog"
-              duplicate_count=$((duplicate_count + count - 1))
-            fi
-          done
-
-          echo "total_quotes=$saved_count" >> $GITHUB_OUTPUT
-          echo "duplicate_count=$duplicate_count" >> $GITHUB_OUTPUT
-
-      - run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Commit and push if changed
+      - name: Commit generated files when changed
         run: |
-          if [[ $(git status --porcelain) ]]; then
-            git add data/quotes.json data/quotes.min.json data/data.log
-            TOTAL=${{ steps.combine_quotes.outputs.total_quotes }}
-            DUPS=${{ steps.combine_quotes.outputs.duplicate_count }}
-            git commit -m "[Update] Total: $TOTAL | Duplicates Removed: $DUPS"
-            git push
-          else
-            echo "No changes to commit"
+          if git diff --quiet -- data/quotes.json data/quotes.min.json data/data.log; then
+            echo "Generated quote data is already up to date."
+            exit 0
           fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/quotes.json data/quotes.min.json data/data.log
+          git commit -m "chore(data): regenerate quote dataset"
+          git push
