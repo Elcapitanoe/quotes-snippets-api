@@ -34,27 +34,28 @@ class QuotesApp {
         margin: 60px auto;
         padding: 0 24px;
         line-height: 1.6;
-        color: #333;
+        background: #000000;
+        color: #f5f5f5;
       }
       h1 { font-size: 2em; margin-bottom: 0.2em; }
       code {
-        background: #f5f5f5;
+        background: #171717;
         padding: 4px 8px;
         border-radius: 6px;
         font-family: monospace;
       }
       pre {
-        background: #f8f8f8;
+        background: #0a0a0a;
         padding: 12px;
         border-radius: 6px;
         overflow-x: auto;
       }
-      a { color: #0070f3; text-decoration: none; }
+      a { color: #f5f5f5; text-decoration: none; }
       a:hover { text-decoration: underline; }
       footer {
         margin-top: 48px;
         font-size: 0.9em;
-        color: #888;
+        color: #a3a3a3;
       }
     `
     document.head.appendChild(style)
