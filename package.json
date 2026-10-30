@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "npm run build && node scripts/dev-server.mjs",
-    "build": "npm run check && node scripts/build-site.mjs",
+    "build": "npm run data:build && npm run check && node scripts/build-site.mjs",
     "test": "node --test",
     "check": "node --check api/quotes.js && node --check src/main.js && node --check scripts/build-site.mjs && node --check scripts/build-quotes.mjs && node --check scripts/dev-server.mjs && node --test && node scripts/build-quotes.mjs --check",
     "data:build": "node scripts/build-quotes.mjs",
