@@ -1,0 +1,100 @@
+401|Dag Hammarskjold|Never measure the height of a mountain until you have reached the top. Then you will see how low it was.
+402|U Thant|The first function of a leader is to lead.
+403|Kurt Waldheim|I have made my own mistakes, and I am prepared to be judged for those.
+404|Javier Pérez de Cuéllar|The world must become a place of tolerance and mutual respect.
+405|Boutros Boutros-Ghali|Only a global partnership can ensure that no one is left behind.
+406|António Guterres|We need to move from a culture of reaction to a culture of prevention.
+407|Pope John Paul II|The future starts today, not tomorrow.
+408|Pope Francis|The world tells us to seek success, power, and money; God tells us to seek humility, service, and love.
+409|Martin Luther|Here I stand. I can do no other.
+410|John Calvin|A dog barks when his master is attacked. I would be a coward if I saw that God's truth is attacked and yet would remain silent.
+411|John Wesley|Do all the good you can, by all the means you can, in all the ways you can, in all the places you can, at all the times you can, to all the people you can, as long as ever you can.
+412|Charles Spurgeon|By perseverance the snail reached the ark.
+413|Billy Graham|The Christian life is not a constant high. I have my moments of deep discouragement. I have to go to God in prayer with tears in my eyes, and say, 'O God, forgive me,' or 'Help me.'
+414|Rick Warren|The best use of life is love. The best expression of love is time. The best time to love is now.
+415|Joel Osteen|You're not defined by your past; you're prepared by it.
+416|Desmond Tutu|If you are neutral in situations of injustice, you have chosen the side of the oppressor.
+417|C. T. Studd|Some wish to live within the sound of a church or chapel bell; I want to run a rescue shop within a yard of hell.
+418|Jim Elliot|He is no fool who gives what he cannot keep to gain what he cannot lose.
+419|Nate Saint|And people who do not know the Lord ask why in the world we waste our lives as missionaries. They forget that they too are expending their lives... and when the bubble has burst they will have nothing of eternal significance to show for the years they have wasted.
+420|Corrie ten Boom|There is no pit so deep, that God's love is not deeper still.
+421|Dietrich Bonhoeffer|Silence in the face of evil is itself evil: God will not hold us guiltless. Not to speak is to speak. Not to act is to act.
+422|Thomas Merton|Art enables us to find ourselves and lose ourselves at the same time.
+423|Henri Nouwen|The great illusion of leadership is to think that man can be led out of the desert by someone who has never been there.
+424|Philip Yancey|Faith is not a cowering admission of powerlessness. It is a brave act of acknowledging that we are not in control.
+425|Max Lucado|A man who wants to lead the orchestra must turn his back on the crowd.
+426|John Piper|God is most glorified in us when we are most satisfied in him.
+427|Tim Keller|The gospel is this: We are more sinful and flawed in ourselves than we ever dared believe, yet at the very same time we are more loved and accepted in Jesus Christ than we ever dared hope.
+428|Francis Chan|Our greatest fear should not be of failure but of succeeding at things in life that don't really matter.
+429|N. T. Wright|Jesus's resurrection is the beginning of God's new project not to snatch people away from earth to heaven but to colonize earth with the life of heaven.
+430|R. C. Sproul|The holiness of God is not an attribute of God. It is the essence of God.
+431|A. W. Tozer|What comes into our minds when we think about God is the most important thing about us.
+432|D. L. Moody|The world has yet to see what God can do with a man fully consecrated to him. By God's help, I aim to be that man.
+433|Jonathan Edwards|Resolution, one: I will live for God. Resolution two: If no one else does, I still will.
+434|George Whitefield|It is a poor sermon that gives no offense; that neither makes the hearer displeased with himself nor with the preacher.
+435|John Newton|I am not what I ought to be, I am not what I want to be, I am not what I hope to be in another world; but still I am not what I once used to be, and by the grace of God I am what I am.
+436|William Wilberforce|You may choose to look the other way but you can never say again that you did not know.
+437|William Booth|While women weep, as they do now, I'll fight; while children go hungry, as they do now, I'll fight; while men go to prison, in and out, in and out, as they do now, I'll fight...
+438|Amy Carmichael|You can give without loving, but you cannot love without giving.
+439|Lottie Moon|I would I had a thousand lives that I might give them to the women of China.
+440|Hudson Taylor|God's work done in God's way will never lack God's supply.
+441|Adoniram Judson|The future is as bright as the promises of God.
+442|William Carey|Expect great things from God; attempt great things for God.
+443|David Livingstone|I will go anywhere, provided it be forward.
+444|Mary Slessor|Why should I fear? I am on a Royal Mission. I am in the service of the King of Kings.
+445|Gladys Aylward|I wasn't God's first choice for what I've done for China... I don't know who it was... It must have been a man... a well-educated man. I don't know what happened. Perhaps he died. Perhaps he wasn't willing... and God looked down... and saw Gladys Aylward.
+446|Eric Liddell|God made me for a purpose, but he also made me fast. And when I run, I feel his pleasure.
+447|Jackie Robinson|A life is not important except in the impact it has on other lives.
+448|Jesse Owens|The battles that count aren't the ones for gold medals. The struggles within yourself—the invisible, inevitable battles inside all of us—that's where it's at.
+449|Arthur Ashe|Start where you are. Use what you have. Do what you can.
+450|Magic Johnson|You're the only one who can make the difference. Whatever your dream is, go for it.
+451|Larry Bird|Push yourself again and again. Don't give an inch until the final buzzer sounds.
+452|Kareem Abdul-Jabbar|One man can be a crucial ingredient on a team, but one man cannot make a team.
+453|Wilt Chamberlain|Everything is habit-forming, so make sure what you do is what you want to be doing.
+454|Bill Russell|The most important measure of how good a game I played was how much better I'd made my teammates play.
+455|Red Auerbach|The coach's job is to be part servant in helping each player reach his goals within the team concept.
+456|Phil Jackson|The strength of the team is each individual member. The strength of each member is the team.
+457|Pat Riley|A champion needs a motivation above and beyond winning.
+458|Gregg Popovich|The measure of who we are is what we do with what we have.
+459|John Wooden|Failure is not fatal, but failure to change might be.
+460|Mike Krzyzewski|My hunger is not for success, it is for excellence.
+461|Bear Bryant|It's not the will to win that matters—everyone has that. It's the will to prepare to win that matters.
+462|Knute Rockne|One man practicing sportsmanship is far better than a hundred teaching it.
+463|Lou Holtz|Ability is what you're capable of doing. Motivation determines what you do. Attitude determines how well you do it.
+464|Joe Paterno|Besides pride, loyalty, discipline, heart, and mind, confidence is the key to all the locks.
+465|Tom Landry|Leadership is a matter of having people look at you and gain confidence, seeing how you react. If you're in control, they're in control.
+466|Don Shula|Sure, luck means a lot in football. Not having a good quarterback is bad luck.
+467|Chuck Noll|Before you can win a game, you have to not lose it.
+468|Bill Walsh|Champions behave like champions before they're champions.
+469|Joe Gibbs|A winning effort begins with preparation.
+470|Tony Dungy|The secret to success is good leadership, and good leadership is all about making the lives of your team members or workers better.
+471|Bill Belichick|Do your job.
+472|Nick Saban|We're not going to talk about what we're going to accomplish. We're going to talk about how we're going to do it.
+473|Urban Meyer|A-plus effort and A-plus attitude.
+474|Dabo Swinney|Let the light that shines in you be brighter than the light that shines on you.
+475|Casey Stengel|Finding good players is easy. Getting them to play as a team is another story.
+476|Yogi Berra|It ain't over 'til it's over.
+477|Jackie Joyner-Kersee|Age is no barrier. It's a limitation you put on your mind.
+478|Misty Copeland|You can do anything you want, even if you are being told negative things. Stay strong and find motivation.
+479|Dan Gable|Gold medals aren't really made of gold. They're made of sweat, determination, and a hard-to-find alloy called guts.
+480|Rocky Marciano|To be a champ you have to believe in yourself when no one else will.
+481|Sugar Ray Robinson|Rhythm is everything in boxing. Every move you make starts with your heart, and that's in rhythm or you're in trouble.
+482|Joe Louis|Every man's got to figure to get beat sometime.
+483|Jack Dempsey|A champion is someone who gets up when he can't.
+484|Mike Tyson|Everyone has a plan until they get punched in the mouth.
+485|Floyd Mayweather Jr.|A true champion can adapt to anything.
+486|Manny Pacquiao|Life is meant to be a challenge, because challenges are what make you grow.
+487|Conor McGregor|Doubt is only removed by action.
+488|Ronda Rousey|Some people like to call me cocky or arrogant, but I just think, 'How dare you assume I should think less of myself?'
+489|Georges St-Pierre|You don't get better on the days when you feel like going. You get better on the days when you don't want to go, but you go anyway.
+490|Anderson Silva|A champion is not made when he succeeds, a champion is made when you look back at the seconds, minutes, hours, days, weeks, and months, he has spent preparing.
+491|Jon Jones|Embrace the grind.
+492|Demetrious Johnson|The best way to get a title shot is to go out there and win.
+493|Amanda Nunes|I'm the best, and I want to fight the best.
+494|Bruce Buffer|It's time!
+495|Joe Rogan|Be the hero of your own movie.
+496|Gordon Ramsay|I am a chef. I am not a celebrity.
+497|Anthony Bourdain|Your body is not a temple, it's an amusement park. Enjoy the ride.
+498|Julia Child|People who love to eat are always the best people.
+499|Jamie Oliver|My intention is to give people a resource so they can save their own lives.
+500|Martha Stewart|Without an open-minded mind, you can never be a great success.

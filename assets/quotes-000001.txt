@@ -1,0 +1,101 @@
+0|Woko Jidodo|Wi wok de tok not only tok de tok
+1|Albert Einstein|Imagination is more important than knowledge.
+2|Socrates|The unexamined life is not worth living.
+3|Yoda|Do or do not. There is no try.
+4|Mahatma Gandhi|Be the change that you wish to see in the world.
+5|Steve Jobs|Stay hungry, stay foolish.
+6|Nelson Mandela|The greatest glory in living lies not in never falling, but in rising every time we fall.
+7|Martin Luther King Jr.|The time is always right to do what is right.
+8|Winston Churchill|Success is not final, failure is not fatal: it is the courage to continue that counts.
+9|Mother Teresa|Spread love everywhere you go. Let no one ever come to you without leaving happier.
+10|Franklin D. Roosevelt|The only thing we have to fear is fear itself.
+11|Eleanor Roosevelt|No one can make you feel inferior without your consent.
+12|William Shakespeare|To be, or not to be: that is the question.
+13|Aristotle|We are what we repeatedly do. Excellence, then, is not an act, but a habit.
+14|Plato|The beginning is the most important part of the work.
+15|Confucius|It does not matter how slowly you go as long as you do not stop.
+16|Lao Tzu|The journey of a thousand miles begins with a single step.
+17|Maya Angelou|I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.
+18|Mark Twain|The secret of getting ahead is getting started.
+19|Oscar Wilde|Be yourself; everyone else is already taken.
+20|Ralph Waldo Emerson|To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.
+21|Henry Ford|Whether you think you can, or you think you can't – you're right.
+22|Leonardo da Vinci|Simplicity is the ultimate sophistication.
+23|Vincent Van Gogh|I dream my painting, and then I paint my dream.
+24|Walt Disney|The way to get started is to quit talking and begin doing.
+25|Oprah Winfrey|The biggest adventure you can take is to live the life of your dreams.
+26|John Lennon|Life is what happens when you're busy making other plans.
+27|Helen Keller|The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.
+28|Anne Frank|In spite of everything, I still believe that people are really good at heart.
+29|Abraham Lincoln|In the end, it's not the years in your life that count. It's the life in your years.
+30|Theodore Roosevelt|Believe you can and you're halfway there.
+31|Babe Ruth|Never let the fear of striking out keep you from playing the game.
+32|Michael Jordan|I can accept failure, everyone fails at something. But I can't accept not trying.
+33|Bruce Lee|Be water, my friend.
+34|Stephen Covey|I am not a product of my circumstances. I am a product of my decisions.
+35|Zig Ziglar|Your attitude, not your aptitude, will determine your altitude.
+36|Thomas Edison|I have not failed. I've just found 10,000 ways that won't work.
+37|Benjamin Franklin|Well done is better than well said.
+38|George Washington|It is better to offer no excuse than a bad one.
+39|John F. Kennedy|Ask not what your country can do for you — ask what you can do for your country.
+40|Robert Frost|In three words I can sum up everything I've learned about life: it goes on.
+41|J.K. Rowling|It is our choices, Harry, that show what we truly are, far more than our abilities.
+42|C.S. Lewis|You are never too old to set another goal or to dream a new dream.
+43|J.R.R. Tolkien|Not all those who wander are lost.
+44|Friedrich Nietzsche|That which does not kill us makes us stronger.
+45|Voltaire|I disapprove of what you say, but I will defend to the death your right to say it.
+46|René Descartes|I think, therefore I am.
+47|Isaac Newton|If I have seen further it is by standing on the shoulders of Giants.
+48|Marie Curie|Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.
+49|Albert Camus|The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.
+50|Simone de Beauvoir|Change your life today. Don't gamble on the future, act now, without delay.
+51|George Orwell|In a time of deceit telling the truth is a revolutionary act.
+52|Aldous Huxley|Experience is not what happens to a man; it is what a man does with what happens to him.
+53|Ernest Hemingway|The best way to find out if you can trust somebody is to trust them.
+54|F. Scott Fitzgerald|The test of a first-rate intelligence is the ability to hold two opposed ideas in the mind at the same time, and still retain the ability to function.
+55|Virginia Woolf|For most of history, Anonymous was a woman.
+56|Jane Austen|There is no charm equal to tenderness of heart.
+57|Charles Dickens|Have a heart that never hardens, and a temper that never tires, and a touch that never hurts.
+58|Leo Tolstoy|If you want to be happy, be.
+59|Fyodor Dostoevsky|To go wrong in one's own way is better than to go right in someone else's.
+60|Sun Tzu|The supreme art of war is to subdue the enemy without fighting.
+61|Dalai Lama|The purpose of our lives is to be happy.
+62|Buddha|The mind is everything. What you think you become.
+63|Rumi|The wound is the place where the Light enters you.
+64|Kahlil Gibran|Your living is determined not so much by what life brings to you as by the attitude you bring to life.
+65|Muhammad Ali|He who is not courageous enough to take risks will accomplish nothing in life.
+66|Pele|Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing.
+67|Vince Lombardi|Perfection is not attainable, but if we chase perfection we can catch excellence.
+68|Wayne Gretzky|You miss 100% of the shots you don't take.
+69|Bill Gates|It's fine to celebrate success but it is more important to heed the lessons of failure.
+70|Jeff Bezos|We see our customers as invited guests to a party, and we are the hosts. It's our job every day to make every important aspect of the customer experience a little bit better.
+71|Elon Musk|When something is important enough, you do it even if the odds are not in your favor.
+72|Mark Zuckerberg|The biggest risk is not taking any risk. In a world that's changing really quickly, the only strategy that is guaranteed to fail is not taking risks.
+73|Warren Buffett|Someone's sitting in the shade today because someone planted a tree a long time ago.
+74|Tony Robbins|The only impossible journey is the one you never begin.
+75|Stephen Hawking|However difficult life may seem, there is always something you can do and succeed at.
+76|Carl Sagan|Somewhere, something incredible is waiting to be known.
+77|Neil Armstrong|That's one small step for a man, one giant leap for mankind.
+78|Malala Yousafzai|One child, one teacher, one book, one pen can change the world.
+79|Greta Thunberg|You are never too small to make a difference.
+80|Michelle Obama|The only limit to the height of your achievements is the reach of your dreams and your willingness to work for them.
+81|Barack Obama|Change will not come if we wait for some other person or some other time. We are the ones we've been waiting for. We are the change that we seek.
+82|Margaret Thatcher|If you want something said, ask a man; if you want something done, ask a woman.
+83|Indira Gandhi|You cannot shake hands with a clenched fist.
+84|Queen Elizabeth II|It has always been easy to hate and destroy. To build and to cherish is much more difficult.
+85|Princess Diana|Carry out a random act of kindness, with no expectation of reward, safe in the knowledge that one day someone might do the same for you.
+86|Soekarno|Give me 1,000 old men, I will rip Semeru from its roots. Give me 10 youths, I will shake the world.
+87|B.J. Habibie|Without love, intelligence is dangerous; and without intelligence, love is not enough.
+88|R.A. Kartini|Many things can bring you down. But the only thing that can really bring you down is your own attitude.
+89|Ki Hajar Dewantara|Ing Ngarso Sung Tulodo, Ing Madyo Mangun Karso, Tut Wuri Handayani. (In front, an example; in the middle, an inspiration; from behind, a support.)
+90|Tan Malaka|An idealist is a person who helps other people to be prosperous.
+91|Sutan Sjahrir|Life which is not risked, is not lived.
+92|Pramoedya Ananta Toer|A person may be clever to the heavens, but as long as he does not write, he will be lost in society and from history.
+93|Bob Marley|The greatness of a man is not in how much wealth he acquires, but in his integrity and his ability to affect those around him positively.
+94|Jimi Hendrix|Knowledge speaks, but wisdom listens.
+95|Freddie Mercury|I won't be a rock star. I will be a legend.
+96|Kurt Cobain|Wanting to be someone else is a waste of the person you are.
+97|Tupac Shakur|Reality is wrong. Dreams are for real.
+98|Dr. Seuss|You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.
+99|A. A. Milne|You are braver than you believe, stronger than you seem, and smarter than you think.
+100|Lewis Carroll|If you don't know where you are going, any road will get you there.

@@ -1,0 +1,100 @@
+2201|Asteria Vale|Kindness is a language that makes room for another person's dignity.
+2202|Bramwell Fern|A thoughtful pause can keep a difficult conversation from becoming a permanent wound.
+2203|Celandine Rook|The smallest sincere gesture can restore warmth to a day that forgot it.
+2204|Damaris Sol|Listening is a quiet way of telling someone their inner world matters.
+2205|Elianor Quill|A generous heart does not need an audience to recognize a need.
+2206|Faron Wren|Respect turns disagreement into a door instead of a battlefield.
+2207|Gisella Morn|The kindness you offer may become someone's evidence that tomorrow is possible.
+2208|Hollis Vale|A gentle word can travel farther than the person who first spoke it.
+2209|Ilyana Frost|Care is often measured in the details remembered after everyone else has moved on.
+2210|Jareth Ash|The strongest relationships make honesty feel safer than performance.
+2211|Kestrel Sol|A person can feel less alone simply because someone stayed curious about their silence.
+2212|Lavinia Quill|Kindness does not make boundaries weaker; it makes them more humane.
+2213|Mirelle Wren|A patient listener gives another person time to find the truth inside their words.
+2214|Nerissa Vale|The best apology changes behavior before it changes vocabulary.
+2215|Odelia Morn|A shared laugh can build a bridge that serious explanations could not finish.
+2216|Peregrine Frost|Compassion begins when you stop demanding that pain look familiar before you respect it.
+2217|Quilla Ash|A thoughtful question can be more comforting than an immediate solution.
+2218|Rhoswen Sol|The right company does not shrink your light to make the room comfortable.
+2219|Sabria Wren|A kind person notices the invisible weight others are carrying.
+2220|Tavian Vale|Trust grows through small promises kept after the excitement has gone.
+2221|Una Quill|A gentle truth can protect a relationship better than a convenient silence.
+2222|Valerian Morn|The warmth of belonging begins when someone remembers to make space.
+2223|Wisteria Frost|A good friend does not solve every storm; they help you find your footing.
+2224|Xanthe Ash|Care is attention repeated until it becomes a place to rest.
+2225|Yarrow Sol|A sincere welcome can make an unfamiliar room feel briefly like home.
+2226|Zinnia Wren|Kindness is not a performance when it continues after nobody is watching.
+2227|Amaranth Vale|The most healing conversations leave both people more honest than before.
+2228|Berenice Quill|A person feels respected when their no is heard without punishment.
+2229|Cassian Morn|Compassion sees the whole person, including the parts that are still learning.
+2230|Delyth Frost|A small act of patience can interrupt a cycle that has lasted for years.
+2231|Esmond Ash|The people who matter make room for your growth without treating your change as betrayal.
+2232|Fiora Sol|A quiet presence can be a stronger gift than a brilliant speech.
+2233|Galen Wren|Forgiveness can open a window without pretending the room was never damaged.
+2234|Honora Vale|A caring question asks not only what happened, but what would help now.
+2235|Ione Quill|Respect is the habit of remembering that every person contains more than one chapter.
+2236|Jovian Morn|A relationship becomes durable when both people can bring the unedited version of themselves.
+2237|Kerenza Frost|Kindness makes ordinary places safer for vulnerable truths.
+2238|Leander Ash|A thoughtful boundary can preserve affection by preventing resentment from taking root.
+2239|Maelis Sol|The best support does not take away someone's agency; it strengthens their hands.
+2240|Nimara Wren|A sincere thank-you can return value to work that had become invisible.
+2241|Orla Vale|Good company makes quiet moments feel shared rather than empty.
+2242|Phaedra Quill|A compassionate response leaves space for someone to become better than their worst moment.
+2243|Quinlan Morn|Trust grows when words and patterns tell the same story.
+2244|Ravella Frost|A small kindness can be remembered long after its practical problem is gone.
+2245|Serilda Ash|The safest relationships do not require you to audition for your place.
+2246|Tamsin Sol|A warm welcome can be a form of courage in a world that often excludes first.
+2247|Ursula Wren|Care becomes visible through the questions asked after the obvious crisis ends.
+2248|Virelai Vale|A good conversation leaves room for pauses, changes, and truths still arriving.
+2249|Wendell Quill|The kindest correction protects both the truth and the person's dignity.
+2250|Xavia Morn|A relationship deepens when curiosity survives the first misunderstanding.
+2251|Ysolde Frost|Compassion is not agreement; it is refusing to make another person's pain smaller.
+2252|Zorion Ash|A considerate person changes the atmosphere without demanding credit for it.
+2253|Aurelia Sol|The right words can mend a morning before they ever solve a problem.
+2254|Briar Wren|A friend who tells the truth with care gives you a mirror you can use.
+2255|Calista Vale|Kindness is a choice to leave the world slightly less heavy than you found it.
+2256|Dorian Quill|A shared silence becomes comfortable when neither person needs to perform inside it.
+2257|Evania Morn|Respect begins with allowing someone else's experience to be real even when it differs from yours.
+2258|Fintan Frost|A gentle response can protect a conversation from the reflex to win.
+2259|Gwyneira Ash|The people who listen closely often notice the help you are too proud to request.
+2260|Hesper Sol|A generous spirit gives encouragement without keeping an account of every gift.
+2261|Ilaria Wren|A relationship can survive disagreement when affection is not used as leverage.
+2262|Juno Vale|A sincere invitation tells a person they are wanted before they have proven usefulness.
+2263|Kallista Quill|The best kind of care makes someone feel more capable, not more dependent.
+2264|Liora Morn|A calm voice can return dignity to a room crowded with blame.
+2265|Marlowe Frost|Kindness often looks like remembering what another person thought nobody noticed.
+2266|Nerian Ash|A healthy bond allows both people to remain distinct without becoming distant.
+2267|Oriana Sol|An honest apology is a bridge built from changed behavior.
+2268|Perrine Wren|The smallest act of inclusion can change who feels entitled to participate.
+2269|Quorra Vale|A thoughtful friend does not rush your grief toward a more convenient shape.
+2270|Roderic Quill|Respect turns a limit into information rather than an insult.
+2271|Soleia Morn|A kind heart can be discerning without becoming hard.
+2272|Tavira Frost|The people worth keeping celebrate your growth even when it changes the arrangement.
+2273|Ulric Ash|A conversation improves when curiosity arrives before the verdict.
+2274|Valora Sol|A trusted person makes room for your silence without filling it with assumptions.
+2275|Wrenley Wren|Compassion gives difficult truths a chance to be heard instead of merely endured.
+2276|Xenia Vale|A small act of consideration can tell someone they are not an afterthought.
+2277|Yvaine Quill|The best friendships contain enough honesty to prevent affection from becoming a disguise.
+2278|Zareph Morn|A gentle answer can be firm without becoming cold.
+2279|Althea Frost|Care is the art of noticing what someone needs before they must defend needing it.
+2280|Balthazar Ash|A welcoming spirit turns difference into texture rather than distance.
+2281|Cerys Sol|The most meaningful help preserves the other person's right to choose.
+2282|Damarion Wren|A relationship grows when both people can repair instead of merely apologize.
+2283|Elowyn Vale|A patient friend lends calm until your own calm returns.
+2284|Faelan Quill|Kindness is strongest when it remains specific.
+2285|Ginevra Morn|A respectful disagreement can make two minds larger without making either one smaller.
+2286|Harlan Frost|A person who feels heard can begin hearing themselves more clearly.
+2287|Ilyra Ash|A quiet thank-you can illuminate work that has been carrying everyone else.
+2288|Jareth Sol|The right relationship does not demand constant access to prove its strength.
+2289|Kestia Wren|A caring boundary is a promise not to let resentment speak for you later.
+2290|Leora Vale|The warmth of a room often begins with the first person who chooses welcome.
+2291|Merritt Quill|A good apology makes room for the hurt without turning it into a weapon.
+2292|Nuala Morn|Compassion is attention that refuses to become indifferent with repetition.
+2293|Ophira Frost|A person's dignity should remain intact even when their choices need correction.
+2294|Peregrin Ash|A sincere compliment names the effort, not just the result.
+2295|Quintara Sol|The strongest bonds allow people to be grateful and honest at the same time.
+2296|Riven Wren|A gentle presence can make a hard truth survivable.
+2297|Seraphine Vale|Kindness becomes culture when ordinary people practice it without waiting for leadership.
+2298|Tarian Quill|A relationship feels safe when repair is expected, not treated as a miracle.
+2299|Uriah Morn|The smallest invitation can widen a person's sense of belonging.
+2300|Virelia Frost|Care is what remains when attention keeps choosing someone after novelty leaves.
