@@ -78,7 +78,7 @@
 1578|Aarav Gupta|If you are not embarrassed by the first version of your product, you launched too late.
 1579|Zoe Thomas|Culture is not the ping pong table; it is how you treat people when things go wrong.
 1580|Ibrahim Al-Fayed|Focus on being productive instead of busy.
-1581|Elara Vance|Your most unhappy customers are your greatest source of learning.
+1581|Elara Vance|A hopeful outlook can turn uncertainty into direction.
 1582|Viktor Sokolov|Do not lower your standards to fit the market; raise your value to set the standard.
 1583|Maria Hernandez|The goal is not to be perfect by the end, the goal is to be better today.
 1584|James Smith|A vision without resources is just a hallucination.
@@ -89,12 +89,13 @@
 1589|Sophie Martin|Success is the sum of small efforts, repeated day in and day out.
 1590|Hassan Ibrahim|Be the type of leader you would follow.
 1591|Julia Rossi|The secret to change is to focus all of your energy, not on fighting the old, but on building the new.
-1592|Maximilian Schneider|If you want to lift yourself up, lift up someone else.
-1593|Riya Patel|Don't let the noise of others' opinions drown out your own inner voice.
+1592|Maximilian Schneider|A small act can turn uncertainty into direction.
+1593|Riya Patel|A brave step helps tomorrow begin with greater courage.
 1594|Antonio Ricci|Stay hungry, stay foolish, stay curious.
-1595|Chen Wei|The only way to do great work is to love what you do.
-1596|Emily White|Efficiency is doing things right; effectiveness is doing the right things.
+1595|Chen Wei|A small act helps tomorrow begin with greater courage.
+1596|Emily White|A useful question helps tomorrow begin with greater courage.
 1597|Oscar Gomez|Don't count the people you reach; reach the people who count.
 1598|Nina Popova|It is not the strongest of the species that survives, but the one most responsive to change.
-1599|Kofi Mensah|Your time is limited, so don't waste it living someone else's life.
-1600|Alice Müller|The best way to predict the future is to invent it.
+1599|Kofi Mensah|A generous spirit helps tomorrow begin with greater courage.
+1600|Alice Müller|An honest effort helps tomorrow begin with greater courage.
+

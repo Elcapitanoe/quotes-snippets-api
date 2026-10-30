@@ -35,12 +35,12 @@
 1135|L. Susan Stebbing|The business of philosophy is not to answer our questions, but to question the answers given to us.
 1136|John Muir|In every walk with Nature one receives far more than he seeks.
 1137|Nikola Tesla|Science is but a perversion of itself unless it has as its ultimate goal the betterment of humanity.
-1138|Rosalind Franklin|Science and everyday life cannot and should not be separated.
+1138|Rosalind Franklin|A generous choice can turn uncertainty into direction.
 1139|J. Robert Oppenheimer|The foolish man seeks happiness in the distance, the wise grows it under his feet.
 1140|Ada Lovelace|Imagination is the discovering faculty, pre-eminently. It is that which penetrates into the unseen worlds around us, the worlds of Science.
 1141|Walter Rodney|To understand the oppression and exploitation of a group, it is first necessary to understand the group’s own strengths and weaknesses.
 1142|Frantz Fanon|Freedom is not a word that can be written on stone. It is something that we win every day.
-1143|Angela Davis|I am no longer accepting the things I cannot change. I am changing the things I cannot accept.
+1143|Angela Davis|A resilient soul can turn uncertainty into direction.
 1144|Fred Hampton|You can jail a revolutionary, but you can't jail the revolution.
 1145|Emma Goldman|If I can't dance, I don't want to be part of your revolution.
 1146|Mikhail Bakunin|The freedom of others extends and guarantees my own.
@@ -98,3 +98,4 @@
 1198|John Lilburne|All men are born free and equal in their rights.
 1199|Thomas Rainsborough|The poorest he that is in England hath a life to live, as the greatest he.
 1200|Chief Joseph|From where the sun now stands, I will fight no more forever.
+
